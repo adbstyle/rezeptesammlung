@@ -10,9 +10,12 @@ lang: de
 author: Asia Street Food
 date_published: 2025-07-21
 images: [images/pho-bo-hanoi.jpg]
-category: Suppe & Eintopf
+category: Hauptgericht
+dish_type: Suppe
 cuisine: vietnamesisch
-keywords: [pho, rind, suppe, vietnam, reisnudeln]
+season: [winter]
+occasions: [gaeste]
+keywords: [pho, rind, vietnam, reisnudeln]
 difficulty: anspruchsvoll
 times: { prep: 30, cook: 300 }   # prep geschätzt — Original nennt nur die Kochzeit (5 h)
 yield:

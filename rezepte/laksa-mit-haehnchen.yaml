@@ -7,9 +7,11 @@ lang: de
 author: Ruby Goss
 date_published: 2021-09-24
 images: [images/laksa-mit-haehnchen.jpg]
-category: Suppe & Eintopf
+category: Hauptgericht
+dish_type: Suppe
 cuisine: asiatisch
-keywords: [suppe, nudeln, curry, laksa, malaysia, asiatisch]
+season: [herbst, winter]
+keywords: [nudeln, curry, laksa, malaysia]
 difficulty: mittel
 times: { prep: 40 }
 yield:

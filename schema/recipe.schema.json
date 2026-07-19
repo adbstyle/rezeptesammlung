@@ -18,8 +18,19 @@
       "minItems": 1,
       "items": { "type": "string", "pattern": "^images/.+\\.(jpg|jpeg|png)$" }
     },
-    "category": { "type": "string", "minLength": 1 },
+    "category": { "enum": ["Apéro", "Vorspeise", "Hauptgericht", "Beilage", "Dessert", "Brunch & Frühstück", "Getränk"] },
+    "dish_type": { "enum": ["Salat", "Suppe", "Eintopf", "Pasta", "Risotto", "Auflauf & Gratin", "Burger", "Kuchen & Torten", "Brot & Zopf", "Gebäck", "Glace"] },
     "cuisine": { "type": "string" },
+    "season": {
+      "type": "array",
+      "items": { "enum": ["fruehling", "sommer", "herbst", "winter"] },
+      "uniqueItems": true
+    },
+    "occasions": {
+      "type": "array",
+      "items": { "enum": ["weihnachten", "ostern", "grill", "gaeste", "party", "familie"] },
+      "uniqueItems": true
+    },
     "keywords": { "type": "array", "items": { "type": "string" } },
     "diet": {
       "type": "array",

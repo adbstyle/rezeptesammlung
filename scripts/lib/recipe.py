@@ -30,6 +30,22 @@ DIET_LABELS = {
     "low_carb": "low carb",
 }
 
+SEASON_LABELS = {
+    "fruehling": "Frühling",
+    "sommer": "Sommer",
+    "herbst": "Herbst",
+    "winter": "Winter",
+}
+
+OCCASION_LABELS = {
+    "weihnachten": "Weihnachten",
+    "ostern": "Ostern",
+    "grill": "Grillieren",
+    "gaeste": "Für Gäste",
+    "party": "Party",
+    "familie": "Familie & Kinder",
+}
+
 
 # ---------------------------------------------------------------- Laden
 
@@ -174,8 +190,11 @@ def render_markdown(recipe: dict, factor: float, units: dict[str, str],
     out += [f"![{recipe['title']}]({resolve_image(recipe['images'][0])})", ""]
     out += [" ".join(recipe["description"].split()), ""]
     out += [" · ".join(f"**{m}**" for m in meta)]
-    if recipe.get("diet"):
-        out += ["", "*" + " · ".join(DIET_LABELS[d] for d in recipe["diet"]) + "*"]
+    tags = [DIET_LABELS[d] for d in recipe.get("diet", [])]
+    tags += [SEASON_LABELS[s] for s in recipe.get("season", [])]
+    tags += [OCCASION_LABELS[o] for o in recipe.get("occasions", [])]
+    if tags:
+        out += ["", "*" + " · ".join(tags) + "*"]
 
     out += ["", "## Zutaten", ""]
     for section, lines in ingredient_list(recipe, factor, units):

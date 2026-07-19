@@ -70,8 +70,11 @@ rezeptesammlung/
 | `author` | string | ✓ | `author.name` |
 | `date_published` | date (ISO) | ✓ | `datePublished` |
 | `images` | list\<pfad relativ zu `rezepte/`\> | ✓ (min. 1) | `image` (Google: Pflicht) |
-| `category` | string (z. B. Backen, Hauptgericht) | ✓ | `recipeCategory` |
+| `category` | enum: Gang (Kap. 4.7) | ✓ | `recipeCategory` |
+| `dish_type` | enum: Gerichtsart (Kap. 4.7) | – | `keywords` |
 | `cuisine` | string (z. B. Schweiz) | – | `recipeCuisine` |
+| `season` | list\<enum\> (Kap. 4.7) | – | `keywords` |
+| `occasions` | list\<enum\> (Kap. 4.7) | – | `keywords` |
 | `keywords` | list\<string\> | – | `keywords` |
 | `diet` | list\<enum\> (Kap. 4.5) | – | `suitableForDiet` |
 | `difficulty` | enum: `einfach` \| `mittel` \| `anspruchsvoll` | – | – (nur Buch/Web) |
@@ -148,6 +151,26 @@ nutrition:
   carbohydrates: 45  # g
   fat: 11            # g
 ```
+
+### 4.7 Klassifikation — kontrollierte Vokabulare
+
+Facetten nach dem Vorbild der Migusto-Rezeptfilter (Analyse 2026-07-19).
+Erweiterung nur über Anpassung des JSON Schemas (wie `diet`).
+
+- **`category` (Gang, Pflicht):** `Apéro` | `Vorspeise` | `Hauptgericht` |
+  `Beilage` | `Dessert` | `Brunch & Frühstück` | `Getränk` —
+  bestimmt auch die Kapitelbildung im PDF-Buch (Kap. 10.1).
+- **`dish_type` (Gerichtsart, optional):** `Salat` | `Suppe` | `Eintopf` |
+  `Pasta` | `Risotto` | `Auflauf & Gratin` | `Burger` | `Kuchen & Torten` |
+  `Brot & Zopf` | `Gebäck` | `Glace`
+- **`season` (optional):** `fruehling` | `sommer` | `herbst` | `winter`
+- **`occasions` (optional):** `weihnachten` | `ostern` | `grill` |
+  `gaeste` | `party` | `familie`
+
+**Berechnete Facetten (nie erfasst):** „Fertig in …" folgt aus der
+Zeitsumme, „< 7 Zutaten" aus der Länge der generierten Zutatenliste,
+„Schnell & einfach" aus `difficulty` + Zeitsumme. Konsequenz des
+Kernprinzips (Kap. 2): Ableitbares wird berechnet, damit es nie veraltet.
 
 ## 5. Referenz-Syntax in Schritt-Texten
 

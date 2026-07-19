@@ -7,9 +7,12 @@ lang: de
 author: Andrea Pistorius
 date_published: 2020-12-08
 images: [images/schwarze-linsen-mango-salat.jpg]
-category: kleine Mahlzeit
+category: Vorspeise
+dish_type: Salat
 cuisine: Orient
-keywords: [salat, linsen, mango, granatapfel, party, winter]
+season: [winter]
+occasions: [party]
+keywords: [linsen, mango, granatapfel, kleine mahlzeit, mitnehmen]
 diet: [vegan, vegetarian, gluten_free, lactose_free]
 difficulty: einfach
 times: { prep: 25 }

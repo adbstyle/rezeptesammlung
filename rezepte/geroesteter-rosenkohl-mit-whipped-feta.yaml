@@ -10,7 +10,9 @@ date_published: 2024-11-14
 images: [images/geroesteter-rosenkohl-mit-whipped-feta.jpg]
 category: Hauptgericht
 cuisine: orientalisch
-keywords: [rosenkohl, feta, mezze, orientalisch, vegetarisch]
+season: [herbst, winter]
+occasions: [gaeste]
+keywords: [rosenkohl, feta, mezze]
 diet: [vegetarian]
 difficulty: einfach
 times: { prep: 15, cook: 15 }   # Original ohne Zeitangaben — geschätzt

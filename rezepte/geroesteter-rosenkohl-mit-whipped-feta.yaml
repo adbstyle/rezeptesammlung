@@ -1,0 +1,75 @@
+id: geroesteter-rosenkohl-mit-whipped-feta
+title: Orientalischer gerösteter Rosenkohl mit whipped Feta
+description: >
+  Karamellisiert gerösteter Rosenkohl auf cremig aufgeschlagenem Feta,
+  bestreut mit Granatapfelkernen, Pistazien und Petersilie — orientalisch
+  gewürzt mit Kreuzkümmel und Ahornsirup.
+lang: de
+author: Nadja Zimmermann
+date_published: 2024-11-14
+images: [images/geroesteter-rosenkohl-mit-whipped-feta.jpg]
+category: Hauptgericht
+cuisine: orientalisch
+keywords: [rosenkohl, feta, mezze, orientalisch, vegetarisch]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 15, cook: 15 }   # Original ohne Zeitangaben — geschätzt
+yield:
+  servings: 4                   # Original ohne Portionenangabe — geschätzt (1 kg Rosenkohl als Hauptgericht)
+  description: Für 4 Personen
+
+steps:
+  - section: Rosenkohl
+    text: >
+      {rosenkohl} rüsten, halbieren und ca. 2 Minuten in gesalzenem Wasser
+      kochen. Dann gut abtropfen lassen.
+    ingredients:
+      - { id: rosenkohl, amount: 1, unit: kg, item: Rosenkohl }
+
+  - section: Whipped Feta
+    text: >
+      In der Zwischenzeit den whipped Feta vorbereiten: {feta} und
+      {joghurt} mit {knoblauch}, {olivenoel_feta} und dem Saft von
+      {zitrone_feta} in den Mixer geben und cremig aufschlagen. Mit {salz}
+      und {pfeffer} abschmecken.
+    ingredients:
+      - { id: feta, amount: 200, unit: g, item: Feta }
+      - { id: joghurt, amount: 100, unit: g, item: griechisches Joghurt }
+      - { id: knoblauch, amount: 1, item: Knoblauchzehe }
+      - { id: olivenoel_feta, amount: 2, unit: EL, item: Olivenöl }
+      - { id: zitrone_feta, amount: 0.5, item: Zitrone, note: Saft }
+      - { id: salz, amount: 1, unit: Prise, item: Salz, scalable: false }
+      - { id: pfeffer, amount: 1, unit: Prise, item: Pfeffer, scalable: false }
+
+  - section: Rosenkohl
+    text: >
+      Rosenkohl mit {zwiebel}, fein geschnitten, in {olivenoel_braten}
+      anbraten, bis sich eine braune Kruste bildet. Mit {ahornsirup}
+      ablöschen und karamellisieren lassen. Am Schluss mit {kreuzkuemmel},
+      {chilipulver} sowie Salz und Pfeffer würzen.
+    ingredients:
+      - { id: zwiebel, amount: 1, item: Zwiebel }
+      - { id: olivenoel_braten, amount: 1, unit: EL, item: Olivenöl }
+      - { id: ahornsirup, amount: 2, unit: EL, item: Ahornsirup }
+      - { id: kreuzkuemmel, amount: 1, unit: TL, item: Kreuzkümmel }
+      - { id: chilipulver, amount: 1, unit: Prise, item: Chilipulver, scalable: false }
+
+  - section: Topping
+    text: >
+      Whipped Feta auf einem Teller verteilen, Rosenkohl daraufgeben und
+      mit den Kernen von {granatapfel}, {pistazien} und {petersilie}
+      bestreuen. Am Schluss alles mit etwas Olivenöl und dem Saft von
+      {zitrone_topping} beträufeln.
+    ingredients:
+      - { id: granatapfel, amount: 1, item: Granatapfel, note: Kerne }
+      - { id: pistazien, amount: 2, unit: EL, item: Pistazien, note: gehackt }
+      - { id: petersilie, amount: 0.5, unit: Bund, item: Petersilie, note: fein gehackt }
+      - { id: zitrone_topping, amount: 0.5, item: Zitrone, note: Saft }
+
+equipment: [Mixer, grosse Bratpfanne]
+source:
+  name: LouMalou (Nadja Zimmermann)
+  url: https://loumalou.ch/geroesteter-rosenkohl-mit-whipped-feta/
+notes: >
+  Passt als vegetarisches Hauptgericht oder als Teil eines Mezze-Tischs.
+  Portionen und Zeiten sind geschätzt — das Original macht keine Angaben.

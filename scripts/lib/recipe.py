@@ -116,14 +116,17 @@ def ingredient_list(recipe: dict, factor: float,
                 section_of[iid] = step.get("section")
             totals[iid] += scaled(ing, factor)
 
+    # Gruppen gleichen Namens zusammenführen (Sections können sich in der
+    # Schrittfolge abwechseln, z. B. blanchieren → Sauce → braten)
     grouped: list[tuple[str | None, list[str]]] = []
+    by_section: dict = {}
     for iid in order:
         line = format_ingredient(totals[iid], first[iid], units, with_note=True)
         section = section_of[iid]
-        if grouped and grouped[-1][0] == section:
-            grouped[-1][1].append(line)
-        else:
-            grouped.append((section, [line]))
+        if section not in by_section:
+            by_section[section] = (section, [])
+            grouped.append(by_section[section])
+        by_section[section][1].append(line)
     return grouped
 
 

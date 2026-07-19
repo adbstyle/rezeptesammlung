@@ -1,0 +1,90 @@
+id: laksa-mit-haehnchen
+title: Laksa mit Hühnchen (malaysische Curry-Nudelsuppe)
+description: >
+  Diese schnelle Version von Chicken Laksa, einer malaysischen
+  Curry-Nudelsuppe, erreicht auch mit einfachen Zutaten eine leckere Basis.
+lang: de
+author: Ruby Goss
+date_published: 2021-09-24
+images: [images/laksa-mit-haehnchen.jpg]
+category: Suppe & Eintopf
+cuisine: asiatisch
+keywords: [suppe, nudeln, curry, laksa, malaysia, asiatisch]
+difficulty: mittel
+times: { prep: 40 }
+yield:
+  servings: 2
+  description: Für 2 Personen
+
+nutrition:
+  calories: 1400
+  protein: 65
+  carbohydrates: 110
+  fat: 80
+
+steps:
+  - section: Laksa-Paste
+    text: >
+      Für die Laksa-Paste {currypaste}, {zwiebel}, {knoblauch}, {ingwer},
+      {chili} und den weissen Teil von {zitronengras} in einen Messbecher
+      geben und fein pürieren. Falls nötig etwas Öl hinzufügen.
+    ingredients:
+      - { id: currypaste, amount: 2, unit: EL, item: rote Thai-Currypaste }
+      - { id: zwiebel, amount: 1, item: rote Zwiebel }
+      - { id: knoblauch, amount: 3, item: Knoblauchzehen }
+      - { id: ingwer, amount: 15, unit: g, item: Ingwer }
+      - { id: chili, amount: 1, item: Thai-Chili }
+      - { id: zitronengras, amount: 1, item: Stange Zitronengras }
+
+  - section: Suppe
+    text: >
+      Die Hälfte von {oel} in einem tiefen Topf oder einer tiefen
+      Gusseisenpfanne erhitzen. {haehnchen} scharf anbraten, ca. 2 Min. pro
+      Seite, dann herausnehmen und zur Seite stellen. Restliches Öl und
+      Laksa-Paste in den Topf geben und ca. 4 Min. braten, bis die Paste
+      trocken und aromatisch wird. {currypulver} dazugeben und weitere
+      2 Min. braten. {bruehe}, {kokosmilch}, {fischsauce} und {zucker}
+      hinzufügen und alles zum Kochen bringen. Hitze reduzieren und die
+      Suppe ca. 7 Min. leicht köcheln lassen.
+    ingredients:
+      - { id: oel, amount: 2, unit: EL, item: Pflanzenöl, note: zum Anbraten }
+      - { id: haehnchen, amount: 300, unit: g, item: Hähnchenbrustfilets }
+      - { id: currypulver, amount: 2, unit: EL, item: Currypulver }
+      - { id: bruehe, amount: 400, unit: ml, item: Hühnerbrühe }
+      - { id: kokosmilch, amount: 400, unit: ml, item: Kokosmilch }
+      - { id: fischsauce, amount: 2, unit: EL, item: Fischsauce }
+      - { id: zucker, amount: 1, unit: TL, item: Zucker }
+
+  - section: Einlage
+    text: >
+      {bohnen} putzen, die Enden abschneiden, kurz in einen kleinen
+      Stieltopf mit stark gesalzenem, kochendem Wasser geben und direkt
+      wieder mit einer Schaumkelle herausnehmen. Vorsichtig {eier} ins
+      kochende Wasser legen und ca. 6½ Min. köcheln lassen. {nudeln} nach
+      Packungsanweisung zubereiten. Eier mit kaltem Wasser abschrecken,
+      schälen und halbieren. Hähnchen zurück in die Suppe geben, sodass es
+      gut durcherhitzt wird, ca. 5 Min. köcheln lassen, dann herausnehmen
+      und in Scheiben schneiden.
+    ingredients:
+      - { id: bohnen, amount: 100, unit: g, item: Prinzessbohnen }
+      - { id: eier, amount: 2, item: Eier }
+      - { id: nudeln, amount: 200, unit: g, item: Eiernudeln }
+
+  - section: Servieren
+    text: >
+      Nudeln, Hähnchenscheiben und Eier auf Servierschalen aufteilen und
+      mit der Suppe auffüllen. Mit {koriander}, {sprossen},
+      {chili_garnitur} nach Geschmack und {limette} in Spalten garnieren.
+    ingredients:
+      - { id: koriander, amount: 10, unit: g, item: Koriander }
+      - { id: sprossen, amount: 1, unit: Handvoll, item: Bohnensprossen }
+      - { id: chili_garnitur, amount: 1, item: Thai-Chili, note: zum Servieren }
+      - { id: limette, amount: 1, item: Limette }
+
+equipment: [Schneidebrett, Messer, Messbecher, Stabmixer, Topf (gross), Pfannenwender, Stieltopf, Schaumkelle]
+source:
+  name: Kitchen Stories
+  url: https://www.kitchenstories.com/de/rezepte/laksa-mit-huhnchen-malaysische-curry-nudelsuppe
+notes: >
+  Die Suppe ist reichhaltig — als leichtere Variante die Hälfte der
+  Kokosmilch durch zusätzliche Brühe ersetzen.

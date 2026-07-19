@@ -3,4 +3,4 @@
 mass:    { base: g,  units: { g: 1, kg: 1000 } }
 volume:  { base: ml, units: { ml: 1, cl: 10, dl: 100, l: 1000 } }
 spoons:  { base: TL, units: { TL: 1, EL: 3 } }
-misc:    { units: [Prise, Bund, Blatt, Zweig, Würfel, Msp] }
+misc:    { units: [Prise, Bund, Blatt, Zweig, Würfel, Msp, Handvoll] }

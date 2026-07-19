@@ -84,7 +84,7 @@
             "items": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["id", "amount", "item"],
+              "required": ["id", "item"],
               "properties": {
                 "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
                 "amount": { "type": "number", "exclusiveMinimum": 0 },
@@ -92,6 +92,10 @@
                 "item": { "type": "string", "minLength": 1 },
                 "note": { "type": "string", "minLength": 1 },
                 "scalable": { "type": "boolean" }
+              },
+              "if": { "not": { "required": ["amount"] } },
+              "then": {
+                "properties": { "unit": false, "scalable": false }
               }
             }
           }

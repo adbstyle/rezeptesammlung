@@ -56,12 +56,13 @@ def check_file(path: Path, validator: jsonschema.Draft202012Validator,
                           f"Deklaration im selben Schritt")
 
         for iid, ing in declared.items():
-            # 4. Konsistenz geteilter Zutaten
+            # 4. Konsistenz geteilter Zutaten (inkl. mit/ohne amount)
             signature = (ing["item"], ing.get("unit"),
-                         ing.get("scalable", True), ing.get("note"))
+                         ing.get("scalable", True), ing.get("note"),
+                         ing.get("amount") is None)
             if iid in seen and seen[iid] != signature:
-                errors.append(f"Zutat '{iid}': item/unit/scalable/note "
-                              f"weichen zwischen Schritten ab")
+                errors.append(f"Zutat '{iid}': item/unit/scalable/note/"
+                              f"nach-Belieben weichen zwischen Schritten ab")
             seen.setdefault(iid, signature)
 
             # 5. Einheiten

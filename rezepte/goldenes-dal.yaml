@@ -1,0 +1,102 @@
+id: goldenes-dal
+title: Goldenes Dal mit eingelegtem Gemüse
+description: >
+  Rote und gelbe Linsen zerfallen zu samtigem Biss, Kurkuma verleiht dem
+  Dal sein Sonnengelb — die Würze ist aromatisch statt scharf. Den
+  Kontrast liefert sauer eingelegtes Gemüse; cremiger wird es mit Rahm
+  oder Joghurt, und ein luftiges Fladenbrot zum Auftunken passt immer.
+lang: de
+author: Myriam Zumbühl
+date_published: 2026-03-07
+images: [images/goldenes-dal.jpg]
+category: Hauptgericht
+dish_type: Eintopf
+cuisine: indisch
+keywords: [dal, linsen, kurkuma, pickles, fermentiert]
+diet: [vegetarian, gluten_free]
+difficulty: einfach
+times: { prep: 20, cook: 25, rest: 600 }   # rest: eingelegtes Gemüse zieht über Nacht
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+nutrition:
+  calories: 325
+  protein: 21
+  carbohydrates: 45
+  fat: 6
+
+steps:
+  - section: Eingelegtes Gemüse
+    text: >
+      {blumenkohl} mit {kurkuma_gemuese} und {kardamom} in ein Vorratsglas
+      geben, {zwiebeln_gemuese} mit {zimt}, {sternanis} und
+      {pfefferkoerner} in ein zweites.
+    ingredients:
+      - { id: blumenkohl, amount: 0.5, item: Blumenkohl, note: in kleinste Röschen zerteilt }
+      - { id: kurkuma_gemuese, amount: 0.5, unit: TL, item: Kurkuma }
+      - { id: kardamom, amount: 3, item: Kardamomkapseln }
+      - { id: zwiebeln_gemuese, amount: 3, item: rote Zwiebeln, note: in feinen Ringen }
+      - { id: zimt, amount: 1, item: kleine Zimtstange }
+      - { id: sternanis, amount: 1, item: Sternanis }
+      - { id: pfefferkoerner, amount: 0.5, unit: TL, item: Pfefferkörner }
+
+  - section: Eingelegtes Gemüse
+    text: >
+      {essig}, {wasser}, {zucker} und {salz} aufkochen, gleichmässig auf
+      die Gläser verteilen und gut verschlossen über Nacht ziehen lassen.
+    ingredients:
+      - { id: essig, amount: 500, unit: ml, item: Apfelessig }
+      - { id: wasser, amount: 350, unit: ml, item: Wasser }
+      - { id: zucker, amount: 200, unit: g, item: Zucker }
+      - { id: salz, amount: 25, unit: g, item: Salz }
+
+  - section: Dal
+    text: >
+      {zwiebel} und {chili} fein würfeln. Die Zwiebel 5 Minuten in {oel}
+      anbraten, dann Chili, {ingwer}, {knoblauch}, {kurkuma_dal},
+      {kreuzkuemmel}, {koriander}, {bockshornklee} und {pfeffer}
+      hinzufügen. Eine weitere Minute anbraten, dann {linsen_rot} und
+      {linsen_gelb} unterrühren.
+    ingredients:
+      - { id: zwiebel, amount: 0.5, item: Zwiebel }
+      - { id: chili, amount: 1, item: rote Chilischote }
+      - { id: oel, item: Olivenöl oder Ghee }
+      - { id: ingwer, amount: 5, unit: cm, item: frischer Ingwer, note: fein gerieben }
+      - { id: knoblauch, amount: 2, item: Knoblauchzehen, note: flachgedrückt }
+      - { id: kurkuma_dal, amount: 1, unit: TL, item: Kurkuma }
+      - { id: kreuzkuemmel, amount: 0.5, unit: TL, item: Kreuzkümmel }
+      - { id: koriander, amount: 1, unit: TL, item: gemahlener Koriander }
+      - { id: bockshornklee, amount: 0.25, unit: TL, item: Bockshornklee }
+      - { id: pfeffer, amount: 1, unit: TL, item: schwarzer Pfeffer }
+      - { id: linsen_rot, amount: 150, unit: g, item: rote Linsen }
+      - { id: linsen_gelb, amount: 150, unit: g, item: gelbe Linsen }
+
+  - section: Dal
+    text: >
+      {bruehe} hinzufügen, zum Kochen bringen, Hitze reduzieren und etwa
+      25 Minuten köcheln lassen. Dabei gelegentlich umrühren und bei
+      Bedarf mehr Flüssigkeit hinzufügen.
+    ingredients:
+      - { id: bruehe, amount: 800, unit: ml, item: Gemüsebrühe }
+
+  - section: Garnitur
+    text: >
+      Zum Servieren mit {kokosmilch}, dem eingelegten Gemüse,
+      {schwarzkuemmel}, {sesam}, {dill} und {chili_garnitur} ausgarnieren.
+    ingredients:
+      - { id: kokosmilch, amount: 4, unit: EL, item: Kokosmilch }
+      - { id: schwarzkuemmel, item: Schwarzkümmel }
+      - { id: sesam, item: weisser Sesam }
+      - { id: dill, item: frischer Dill }
+      - { id: chili_garnitur, amount: 0.5, item: roter Chili, note: in Scheiben geschnitten }
+
+equipment: [2 Vorratsgläser, grosser Topf]
+source:
+  name: NZZ Bellevue
+  url: https://bellevue.nzz.ch/kochen-geniessen/rezepte/goldenes-dal-mit-eingelegtem-gemuese-rezept-ld.1927902
+notes: >
+  Cremiger wird das Dal mit untergerührtem Rahm oder Joghurt, herzhafter
+  mit Thunfisch oder frischem Spinat. Das eingelegte Gemüse muss über
+  Nacht ziehen — am Vortag ansetzen; es hält sich verschlossen mehrere
+  Wochen im Kühlschrank.

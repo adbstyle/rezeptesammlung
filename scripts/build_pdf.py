@@ -31,8 +31,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
        padding: 2rem; line-height: 1.6; font-size: 14px; }
 h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
 h2 { border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; margin-top: 2rem; }
-img { max-width: 100%; height: auto; display: block; margin: 1rem auto;
-      border-radius: 6px; }
+img { max-width: 100%; max-height: 480px; width: auto; height: auto;
+      display: block; margin: 1rem auto; border-radius: 6px; }
 ol li, ul li { margin-bottom: 0.4rem; }
 blockquote { border-left: 4px solid #0366d6; margin: 1rem 0;
              padding: 0.5rem 1rem; background: #f8f9fa; }

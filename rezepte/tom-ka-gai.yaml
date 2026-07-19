@@ -1,0 +1,74 @@
+id: tom-ka-gai
+title: Kokossuppe Tom Ka Gai
+description: >
+  Tom Ka Gai ist eine beliebte thailändische Suppe, die ihren
+  charakteristischen Geschmack durch die Zugabe von Galangal
+  («Thai-Ingwer») bekommt.
+lang: de
+author: Christina Hubbeling
+date_published: 2017-11-20
+images: [images/tom-ka-gai.jpg]
+category: Hauptgericht
+dish_type: Suppe
+cuisine: thailändisch
+keywords: [tom ka gai, kokos, poulet, thailand, galangal]
+difficulty: einfach
+times: { prep: 30, cook: 10 }
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+nutrition:
+  calories: 300
+  protein: 27
+  carbohydrates: 14
+  fat: 14
+
+steps:
+  - text: >
+      {zitronengras} leicht zerquetschen. {limettenblaetter}, {ingwer},
+      {galangal} und {chilis} grob hacken und alles in einer beschichteten
+      Pfanne ohne Beigabe von Fett rösten, bis es intensiv duftet.
+      {kokosmilch} dazugeben und 10 Minuten köcheln lassen.
+    ingredients:
+      - { id: zitronengras, amount: 4, item: Stengel Zitronengras }
+      - { id: limettenblaetter, amount: 5, item: Kaffir-Limettenblätter }
+      - { id: ingwer, amount: 4, unit: cm, item: Ingwer, note: frisch }
+      - { id: galangal, amount: 4, unit: cm, item: Galangal, note: frisch }
+      - { id: chilis, amount: 2, item: Chilischoten }
+      - { id: kokosmilch, amount: 6, unit: dl, item: Kokosmilch }
+
+  - text: >
+      {bouillon} zufügen und weitere 15 Minuten köcheln lassen. Mit
+      {fischsauce}, {palmzucker} und {limettensaft} abschmecken. Dann die
+      Flüssigkeit durch ein Sieb passieren.
+    ingredients:
+      - { id: bouillon, amount: 4, unit: dl, item: Hühnerbouillon }
+      - { id: fischsauce, amount: 2, unit: EL, item: Fischsauce }
+      - { id: palmzucker, amount: 1, unit: EL, item: Palmzucker }
+      - { id: limettensaft, amount: 2, unit: EL, item: Limettensaft }
+
+  - text: >
+      Die Flüssigkeit noch einmal kräftig aufkochen lassen. {pilze} putzen
+      und halbieren. Zusammen mit {poulet} und {fruehlingszwiebeln} in die
+      Suppe geben. Knapp 10 Minuten auf kleinem Feuer ziehen lassen, bis
+      das Fleisch gar ist.
+    ingredients:
+      - { id: pilze, amount: 100, unit: g, item: Austernpilze oder Champignons }
+      - { id: poulet, amount: 400, unit: g, item: Pouletbrust, note: in Stücke geschnitten }
+      - { id: fruehlingszwiebeln, amount: 1, unit: Bund, item: Frühlingszwiebeln, note: in Ringe geschnitten }
+
+  - text: >
+      In Suppenschalen füllen. Etwas {koriander} in Stücke zupfen und über
+      die Suppenportionen verteilen. Dazu Jasminreis servieren. Wer es
+      gerne scharf mag, garniert die Suppe mit weiteren Chilischoten.
+    ingredients:
+      - { id: koriander, item: frischer Koriander }
+
+equipment: [beschichtete Pfanne, Sieb, Suppenschalen]
+source:
+  name: NZZ Bellevue
+  url: https://bellevue.nzz.ch/kochen-geniessen/rezepte/kokossuppe-tom-ka-gai-ld.1328557
+notes: >
+  Die Suppe wird traditionell mit Jasminreis serviert — er ist nicht in
+  den Nährwerten enthalten.

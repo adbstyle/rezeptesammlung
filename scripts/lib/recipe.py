@@ -73,11 +73,17 @@ def load_recipe(path: Path) -> dict:
 
 # ------------------------------------------------- Skalierung & Rundung
 
-def scaled(ingredient: dict, factor: float) -> float:
-    """Menge skalieren; scalable: false bleibt unverändert (Kap. 2)."""
+def scaled(ingredient: dict, factor: float) -> float | None:
+    """Menge skalieren; scalable: false bleibt unverändert (Kap. 2).
+
+    Zutaten ohne amount („nach Belieben") liefern None.
+    """
+    amount = ingredient.get("amount")
+    if amount is None:
+        return None
     if ingredient.get("scalable", True):
-        return ingredient["amount"] * factor
-    return float(ingredient["amount"])
+        return amount * factor
+    return float(amount)
 
 
 def display_amount(value: float, unit: str | None, units: dict[str, str]) -> str:
@@ -96,9 +102,20 @@ def display_amount(value: float, unit: str | None, units: dict[str, str]) -> str
     return f"{value:.2f}".rstrip("0").rstrip(".")
 
 
-def format_ingredient(amount: float, ingredient: dict,
+def format_ingredient(amount: float | None, ingredient: dict,
                       units: dict[str, str], with_note: bool = False) -> str:
-    """„Menge Einheit Zutat" — optional mit note für die Zutatenliste."""
+    """„Menge Einheit Zutat" — optional mit note für die Zutatenliste.
+
+    amount None („nach Belieben"): im Schritt-Text nur der Zutatenname,
+    in der Zutatenliste mit dem Zusatz „nach Belieben".
+    """
+    if amount is None:
+        text = ingredient["item"]
+        if with_note:
+            if ingredient.get("note"):
+                text += f" ({ingredient['note']})"
+            text += ", nach Belieben"
+        return text
     parts = [display_amount(amount, ingredient.get("unit"), units)]
     if ingredient.get("unit"):
         parts.append(ingredient["unit"])
@@ -119,7 +136,7 @@ def ingredient_list(recipe: dict, factor: float,
     keine Sections nutzt.
     """
     order: list[str] = []
-    totals: dict[str, float] = {}
+    totals: dict[str, float | None] = {}
     first: dict[str, dict] = {}
     section_of: dict[str, str | None] = {}
     for step in recipe["steps"]:
@@ -130,7 +147,11 @@ def ingredient_list(recipe: dict, factor: float,
                 totals[iid] = 0.0
                 first[iid] = ing
                 section_of[iid] = step.get("section")
-            totals[iid] += scaled(ing, factor)
+            amount = scaled(ing, factor)
+            if amount is None:
+                totals[iid] = None  # „nach Belieben" — Konsistenz prüft validate.py
+            elif totals[iid] is not None:
+                totals[iid] += amount
 
     # Gruppen gleichen Namens zusammenführen (Sections können sich in der
     # Schrittfolge abwechseln, z. B. blanchieren → Sauce → braten)
@@ -160,6 +181,14 @@ def render_step_text(step: dict, factor: float, units: dict[str, str]) -> str:
     return text.replace("{{", "{").replace("}}", "}")
 
 
+def format_minutes(minutes: int) -> str:
+    """Dauer menschenlesbar: 40 → „40 Min.", 300 → „5 Std.", 645 → „10 Std. 45 Min."."""
+    if minutes < 60:
+        return f"{minutes} Min."
+    hours, rest = divmod(minutes, 60)
+    return f"{hours} Std." if rest == 0 else f"{hours} Std. {rest} Min."
+
+
 # ---------------------------------------------------- Markdown-Rendering
 
 def render_markdown(recipe: dict, factor: float, units: dict[str, str],
@@ -173,12 +202,12 @@ def render_markdown(recipe: dict, factor: float, units: dict[str, str],
     resolve_image = resolve_image or (lambda p: p)
     times = recipe["times"]
     total = sum(times.get(k, 0) for k in ("prep", "cook", "rest"))
-    meta = [f"Zubereitung: {times['prep']} Min."]
+    meta = [f"Zubereitung: {format_minutes(times['prep'])}"]
     if times.get("cook"):
-        meta.append(f"Kochen: {times['cook']} Min.")
+        meta.append(f"Kochen: {format_minutes(times['cook'])}")
     if times.get("rest"):
-        meta.append(f"Ruhen: {times['rest']} Min.")
-    meta.append(f"Total: {total} Min.")
+        meta.append(f"Ruhen: {format_minutes(times['rest'])}")
+    meta.append(f"Total: {format_minutes(total)}")
     if recipe.get("difficulty"):
         meta.append(f"Schwierigkeit: {recipe['difficulty']}")
     servings = recipe["yield"]["servings"]

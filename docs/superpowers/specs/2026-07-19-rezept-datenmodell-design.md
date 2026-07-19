@@ -115,7 +115,7 @@ steps:
     text: "{milch} lauwarm erwärmen und die {hefe} darin auflösen."
     ingredients:
       - id: milch            # referenz-schlüssel, eindeutig pro rezept-zutat
-        amount: 125          # zahl (int oder float), immer > 0
+        amount: 125          # zahl (int oder float), > 0; weglassen ⇒ „nach Belieben"
         unit: ml             # muss in units.yaml existieren; optional bei stückzahl
         item: Milch          # anzeigename
         note: 3.5 % Fett     # optional, erscheint in der zutatenliste
@@ -135,6 +135,11 @@ Regeln:
   `amount` variiert.
 - Schritte ohne `ingredients` sind normal („90 Minuten gehen lassen").
 - `unit` entfällt bei reinen Stückzahlen (`amount: 1, item: Ei`).
+- **`amount` weglassen ⇒ „nach Belieben"** (Salz, Koriander zum Garnieren …):
+  keine `unit`, kein `scalable`, keine Skalierung. Die Zutatenliste zeigt
+  „Zutat, nach Belieben"; `{id}` im Schritt-Text wird zum blossen
+  Zutatennamen. Eine `id` ist entweder in allen Vorkommen mit oder in allen
+  ohne `amount` erfasst (Validierungsfehler sonst).
 
 ### 4.5 `diet` — kontrolliertes Vokabular
 

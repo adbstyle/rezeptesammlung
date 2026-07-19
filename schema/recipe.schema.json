@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/adbstyle/rezeptesammlung/schema/recipe.schema.json",
+  "title": "Rezept",
+  "description": "Rezept-Datei gemäss Design-Spec 2026-07-19 (Kap. 4). Mengen leben in den Schritten; die Zutatenliste wird generiert.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "description", "lang", "author", "date_published", "images", "category", "times", "yield", "steps"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "lang": { "type": "string", "pattern": "^[a-z]{2,3}$" },
+    "author": { "type": "string", "minLength": 1 },
+    "date_published": { "type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "images": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "pattern": "^images/.+\\.(jpg|jpeg|png)$" }
+    },
+    "category": { "type": "string", "minLength": 1 },
+    "cuisine": { "type": "string" },
+    "keywords": { "type": "array", "items": { "type": "string" } },
+    "diet": {
+      "type": "array",
+      "items": { "enum": ["vegetarian", "vegan", "gluten_free", "lactose_free", "low_carb"] },
+      "uniqueItems": true
+    },
+    "difficulty": { "enum": ["einfach", "mittel", "anspruchsvoll"] },
+    "times": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prep"],
+      "properties": {
+        "prep": { "type": "integer", "minimum": 0 },
+        "cook": { "type": "integer", "minimum": 0 },
+        "rest": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "yield": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["servings"],
+      "properties": {
+        "servings": { "type": "integer", "minimum": 1 },
+        "description": { "type": "string" }
+      }
+    },
+    "nutrition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "calories": { "type": "number", "minimum": 0 },
+        "protein": { "type": "number", "minimum": 0 },
+        "carbohydrates": { "type": "number", "minimum": 0 },
+        "fat": { "type": "number", "minimum": 0 }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text"],
+        "properties": {
+          "section": { "type": "string", "minLength": 1 },
+          "text": { "type": "string", "minLength": 1 },
+          "image": { "type": "boolean" },
+          "ingredients": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "amount", "item"],
+              "properties": {
+                "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+                "amount": { "type": "number", "exclusiveMinimum": 0 },
+                "unit": { "type": "string", "minLength": 1 },
+                "item": { "type": "string", "minLength": 1 },
+                "note": { "type": "string", "minLength": 1 },
+                "scalable": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "equipment": { "type": "array", "items": { "type": "string" } },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": ["string", "null"] }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

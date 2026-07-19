@@ -1,0 +1,64 @@
+id: schwarze-linsen-mango-salat
+title: Schwarze-Linsen-Mango-Salat
+description: >
+  Der Salat mit schwarzen Linsen, Mango und Granatapfelkernen ist schnell
+  und einfach gemacht. Er ist eine bekömmliche kleine Mahlzeit.
+lang: de
+author: Andrea Pistorius
+date_published: 2020-12-08
+images: [images/schwarze-linsen-mango-salat.jpg]
+category: kleine Mahlzeit
+cuisine: Orient
+keywords: [salat, linsen, mango, granatapfel, party, winter]
+diet: [vegan, vegetarian, gluten_free, lactose_free]
+difficulty: einfach
+times: { prep: 25 }
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+nutrition:
+  calories: 270
+  protein: 7
+  carbohydrates: 30
+  fat: 13
+
+steps:
+  - text: "{linsen} abgiessen, abspülen und abtropfen lassen."
+    ingredients:
+      - id: linsen
+        amount: 330
+        unit: g
+        item: schwarze Linsen
+        note: 2 Dosen à 240 g, Abtropfgewicht
+
+  - text: >
+      {zwiebeln} halbieren und in feine Spalten schneiden. {peperoncino}
+      entkernen und in feine Streifen schneiden. Von {limetten} wenig Schale
+      abreiben, Limetten auspressen. Alles zusammen mit {olivenoel} verrühren.
+    ingredients:
+      - { id: zwiebeln, amount: 2, item: rote Zwiebeln, note: klein }
+      - { id: peperoncino, amount: 1, item: Peperoncino }
+      - { id: limetten, amount: 2, item: Limetten }
+      - { id: olivenoel, amount: 5, unit: EL, item: Olivenöl }
+
+  - text: >
+      Linsen mit dem Dressing mischen. Mit {salz} und {pfeffer} abschmecken.
+    ingredients:
+      - { id: salz, amount: 1, unit: Prise, item: Salz, scalable: false }
+      - { id: pfeffer, amount: 1, unit: Prise, item: Pfeffer, scalable: false }
+
+  - text: >
+      {mango} schälen, vom Stein und in Scheiben schneiden. Die Blättchen
+      von {koriander} vom Stiel zupfen. {granatapfelkerne}, Mangoschnitze
+      und Koriander mit den Linsen anrichten.
+    ingredients:
+      - { id: mango, amount: 1, item: Mango }
+      - { id: koriander, amount: 0.5, unit: Bund, item: Koriander }
+      - { id: granatapfelkerne, amount: 4, unit: EL, item: Granatapfelkerne }
+
+source:
+  name: Migusto (Migros)
+  url: https://migusto.migros.ch/de/rezepte/schwarze-linsen-mango-salat
+notes: >
+  Auch zum Mitnehmen geeignet.

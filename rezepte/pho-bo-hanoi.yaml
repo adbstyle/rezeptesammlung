@@ -1,0 +1,165 @@
+id: pho-bo-hanoi
+title: Pho Bo Hanoi — vietnamesische Reisnudelsuppe
+description: >
+  Kräftige Rindfleischsuppe mit Reisnudeln und zartem Rindfleisch, gewürzt
+  mit schwarzem Kardamom, Sternanis, Zimt und geröstetem Ingwer. In dieser
+  Version, Pho Bo Tai Chin, vereinen sich rohes (Tai) und gekochtes (Chin)
+  Rindfleisch — nach Hanoier Art mit Fokus auf den intensiven
+  Fleischgeschmack der Brühe.
+lang: de
+author: Asia Street Food
+date_published: 2025-07-21
+images: [images/pho-bo-hanoi.jpg]
+category: Suppe & Eintopf
+cuisine: vietnamesisch
+keywords: [pho, rind, suppe, vietnam, reisnudeln]
+difficulty: anspruchsvoll
+times: { prep: 30, cook: 300 }   # prep geschätzt — Original nennt nur die Kochzeit (5 h)
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+steps:
+  - section: Brühe
+    text: >
+      Für die Brühe {knochen}, {ochsenschwanz} und {kochfleisch} gründlich
+      unter fliessendem lauwarmem Wasser abwaschen, in einen 10-l-Topf
+      geben und so viel kaltes Wasser zugiessen, dass alle Zutaten bedeckt
+      sind. Ohne Deckel bei höchster Hitze zum Kochen bringen und den
+      aufsteigenden Schaum abschöpfen.
+    ingredients:
+      - { id: knochen, amount: 1, unit: kg, item: Rinderknochen }
+      - { id: ochsenschwanz, amount: 1, item: Ochsenschwanz }
+      - { id: kochfleisch, amount: 500, unit: g, item: Rindfleisch, note: "Beinscheibe, Schaufelbug oder Rinderbrust" }
+
+  - section: Brühe
+    text: >
+      Sobald sich kein Schaum mehr bildet — das dauert etwa 5 Minuten —,
+      das Wasser abgiessen und die Knochen sowie Ochsenschwanzstücke erneut
+      gründlich unter fliessendem Wasser reinigen. Den Topf ebenfalls
+      säubern.
+
+  - section: Brühe
+    text: >
+      Knochen, Ochsenschwanz und Rindfleisch wieder in den Topf geben,
+      {wasser} zugiessen und wieder bei höchster Hitze ohne Deckel
+      aufkochen. Den neu entstehenden Schaum abschöpfen, dann bei niedriger
+      Hitze ohne Deckel köcheln lassen.
+    ingredients:
+      - { id: wasser, amount: 6, unit: l, item: Wasser, note: kalt }
+
+  - section: Brühe
+    text: >
+      {ingwer} und {schalotten} säubern, ungeschält auf ein Grillgitter
+      legen und über einem Holzkohlefeuer oder einer Gasflamme grillen, bis
+      die Aussenhaut schwarz ist. Alternativ in einer Pfanne ohne
+      Fettzugabe rösten. Dann mit einer Wurzelbürste unter fliessendem
+      Wasser gründlich abbürsten, bis die schwarzen Stellen vollständig
+      entfernt sind, und zur Brühe in den Topf geben.
+    ingredients:
+      - { id: ingwer, amount: 2, item: Ingwerstücke, note: daumengross }
+      - { id: schalotten, amount: 5, item: Schalotten }
+
+  - section: Brühe
+    text: >
+      Nach 2 Stunden den Gargrad des Rindfleischs mit einer Gabel prüfen.
+      Gar ist es, wenn es nachgiebig und nicht mehr elastisch ist, aber
+      noch nicht auseinanderfällt. Das Fleisch herausnehmen und in eine mit
+      Eiswasser gefüllte Schüssel legen — so verfärbt es sich nicht. Sobald
+      es abgekühlt ist, in Frischhaltefolie wickeln und im Kühlschrank
+      aufbewahren.
+
+  - section: Brühe
+    text: >
+      {kardamom} mit einem schweren Küchenmesser in der Mitte teilen, ohne
+      sie vollständig durchzuschneiden. Dann mit {sternanis} und {zimt} in
+      einer Pfanne bei niedriger Hitze leicht anrösten, bis die Gewürze
+      duften. In den Topf geben. {fischsauce}, {zucker} und {salz} in die
+      Brühe rühren und bei niedriger Hitze ohne Deckel weiterköcheln
+      lassen.
+    ingredients:
+      - { id: kardamom, amount: 1, item: Kapsel schwarzer Kardamom }
+      - { id: sternanis, amount: 1, item: Sternanis }
+      - { id: zimt, amount: 2, unit: cm, item: Zimtrinde }
+      - { id: fischsauce, amount: 3, unit: EL, item: Fischsauce, note: nach Geschmack }
+      - { id: zucker, amount: 1, unit: TL, item: Zucker, note: nach Geschmack }
+      - { id: salz, amount: 1, unit: EL, item: Salz }
+
+  - section: Brühe
+    text: >
+      Nach insgesamt 4 Stunden Kochzeit Knochen und Ochsenschwanz mit den
+      Gewürzen aus der Brühe entfernen und entsorgen. Die Brühe durch ein
+      feines Sieb oder ein Küchentuch in einen Topf passieren — so erhält
+      man eine klare Flüssigkeit.
+
+  - section: Brühe
+    text: >
+      Die Brühe, falls nötig, mit Fischsauce, Salz und Zucker nachwürzen.
+      Sie darf kräftig sein, da sie im Geschmack leichter wird, sobald die
+      Nudeln dazukommen.
+
+  - section: Einlage & Garnitur
+    text: >
+      Etwa 40 Minuten vor dem Servieren für die Einlage {rohfleisch} ins
+      Gefrierfach legen und etwa 30 Minuten anfrieren lassen. Inzwischen
+      {nudeln} in eine Schüssel geben, mit lauwarmem Wasser bedecken und
+      20 Minuten einweichen. Die Suppenschalen vorwärmen, denn Pho Bo muss
+      sehr heiss serviert werden!
+    ingredients:
+      - { id: rohfleisch, amount: 200, unit: g, item: Rindfleisch ohne Fett, note: für die rohe Einlage }
+      - { id: nudeln, amount: 200, unit: g, item: Reis-Bandnudeln }
+
+  - section: Einlage & Garnitur
+    text: >
+      {fruehlingszwiebeln} waschen und putzen. Die grünen Teile in feine
+      Röllchen, die weissen längs in feine Streifen schneiden.
+    ingredients:
+      - { id: fruehlingszwiebeln, amount: 4, item: Frühlingszwiebeln }
+
+  - section: Einlage & Garnitur
+    text: >
+      Für den Beilagenteller {limette} waschen und in acht Spalten
+      schneiden. {chilis} waschen, entkernen, klein schneiden und mit der
+      Limette auf einem kleinen Teller anrichten.
+    ingredients:
+      - { id: limette, amount: 1, item: Limette }
+      - { id: chilis, amount: 2, item: rote Vogelaugenchilis }
+
+  - section: Einlage & Garnitur
+    text: >
+      Das angefrorene Rindfleisch aus dem Gefrierfach nehmen, gegen die
+      Faser in hauchdünne Scheiben schneiden oder grob hacken und auf einen
+      Teller legen.
+
+  - section: Einlage & Garnitur
+    text: >
+      Das gekochte Rindfleisch aus der Folie nehmen, ebenfalls gegen die
+      Faser in hauchdünne Scheiben schneiden und auf einen weiteren Teller
+      legen.
+
+  - section: Anrichten
+    text: >
+      Reichlich Wasser in einem Topf zum Kochen bringen. Die
+      Reis-Bandnudeln abgiessen, abtropfen lassen und in einem Nudelsieb im
+      kochenden Wasser portionsweise 30 Sekunden garen. Abtropfen lassen
+      und auf die vorgewärmten Suppenschalen verteilen.
+
+  - section: Anrichten
+    text: >
+      Je drei bis vier Scheiben gekochtes Rindfleisch auf den Nudeln
+      verteilen, darauf je zwei rohe Rindfleischscheiben legen. Die Brühe
+      nochmals aufkochen und kochend heiss in die Schalen füllen, sodass
+      alle Zutaten gleichmässig bedeckt sind. Die Frühlingszwiebeln
+      darüberstreuen und sofort servieren. Dazu den Beilagenteller,
+      {pfeffer} und Fischsauce zum Würzen reichen.
+    ingredients:
+      - { id: pfeffer, amount: 1, unit: EL, item: schwarzer Pfeffer, note: grob gestossen }
+
+equipment: [10-l-Topf, Grillgitter oder Pfanne, Wurzelbürste, feines Sieb oder Küchentuch, Nudelsieb, Suppenschalen]
+source:
+  name: Asia Street Food
+  url: https://asiastreetfood.com/blogs/rezept/pho-bo-hanoi-vietnamesische-reisnudelsuppe
+notes: >
+  Statt Kardamom, Sternanis und Zimt lässt sich 1 EL Pho-Bo-Gewürzmischung
+  verwenden. Fischsauce und Zucker nach Geschmack dosieren — die Brühe darf
+  kräftig gewürzt sein.

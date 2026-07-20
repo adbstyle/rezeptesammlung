@@ -1,0 +1,86 @@
+id: pastetli-mit-braetkuegeli-und-kohlrabi
+title: Pastetli mit Brätkügeli und Kohlrabi
+description: >
+  Chügelipastetli in sommerlich-leichter Variante: Ein Teil der Brätkügeli
+  wird durch Erbsen und Rüebli ersetzt. Das gibt dem Klassiker einen
+  leichten Twist.
+lang: de
+author: Andrea Pistorius
+date_published: 2026-07-20   # Migusto-PDF ohne Datum — Erfassungsdatum
+images: [images/pastetli-mit-braetkuegeli-und-kohlrabi.jpg]
+category: Hauptgericht
+cuisine: Schweiz
+season: [sommer]
+occasions: [familie]
+keywords: [pastetli, blätterteig, brätkügeli, kohlrabi, erbsen, klassiker]
+difficulty: einfach
+times: { prep: 10, cook: 15 }   # Original: Zubereitung ca. 25 Minuten
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+nutrition:
+  calories: 870
+  protein: 20
+  carbohydrates: 46
+  fat: 67
+
+steps:
+  - text: >
+      {kohlrabi} in kleine Würfel, {karotten} in Scheiben schneiden.
+    ingredients:
+      - { id: kohlrabi, amount: 2, item: kleine Kohlrabi }
+      - { id: karotten, amount: 4, item: Mini-Karotten }
+
+  - text: >
+      {zwiebel} hacken und in der Hälfte des Öls ({oel}) dünsten.
+      Kohlrabi, Karotten und {erbsen} dazugeben und mitdünsten. Mit
+      {apfelwein} und {wasser} ablöschen. {bouillon} dazugeben und alles
+      10 Minuten zugedeckt dämpfen.
+    ingredients:
+      - { id: zwiebel, amount: 1, item: Zwiebel }
+      - { id: oel, amount: 2, unit: EL, item: Olivenöl }
+      - { id: erbsen, amount: 150, unit: g, item: Erbsen, note: "ausgelöst, frisch oder tiefgekühlt" }
+      - { id: apfelwein, amount: 1.5, unit: dl, item: alkoholfreier Apfelwein }
+      - { id: wasser, amount: 1, unit: dl, item: Wasser }
+      - { id: bouillon, amount: 3, unit: TL, item: gekörnte Gemüsebouillon, note: gestrichen }
+
+  - text: >
+      {creme_fraiche} mit {maisstaerke} verrühren, dazugeben und mit dem
+      Gemüse mischen. Bei kleiner Hitze ca. 2 Minuten köcheln lassen.
+    ingredients:
+      - { id: creme_fraiche, amount: 150, unit: g, item: Crème fraîche }
+      - { id: maisstaerke, amount: 2, unit: TL, item: Maisstärke }
+
+  - text: >
+      Inzwischen von {pastetli} die Deckel lösen. Pastetli und Deckel auf
+      ein mit Backpapier belegtes Blech legen. In den noch kalten Ofen
+      schieben, Backofen auf 180 °C Unter-/Oberhitze einstellen. Pastetli
+      bei aufsteigender Hitze ca. 10 Minuten backen.
+    ingredients:
+      - { id: pastetli, amount: 8, item: Blätterteigpastetli }
+
+  - text: >
+      {braetkuegeli} im restlichen Öl ({oel}) rundum anbraten.
+    ingredients:
+      - { id: braetkuegeli, amount: 300, unit: g, item: Brätkügeli }
+      - { id: oel, amount: 2, unit: EL, item: Olivenöl }
+
+  - text: >
+      {petersilie} fein schneiden und mit den Brätkügeli in die Sauce
+      rühren. Mit {salz} und {pfeffer} würzen. Füllung in die Pastetli
+      verteilen.
+    ingredients:
+      - { id: petersilie, amount: 0.5, unit: Bund, item: Petersilie }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: Pfeffer }
+
+equipment: [Backblech, Backpapier]
+source:
+  name: Migusto (Migros)
+  url: https://migusto.migros.ch/de/rezepte/pastetli-mit-braetkuegeli-und-kohlrabi
+notes: >
+  Je nach Saison das Gemüse variieren: z. B. die Pastetli mit Spargeln,
+  Broccoli oder Blumenkohl zubereiten. Für 150 g ausgelöste Erbsen braucht
+  es ca. 500 g Erbsen in der Schote. Statt 4 Mini-Karotten 1–2 normal
+  grosse Karotten verwenden und diese zuerst längs vierteln.

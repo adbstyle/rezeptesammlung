@@ -1,0 +1,74 @@
+id: tomatensuppe-mit-sauerteigbrot
+title: Tomatensuppe mit Sauerteigbrot
+description: >
+  Dicke, würzige Tomatensuppe nach dem Rezept von Yotams Mutter Ruth:
+  Frische Tomaten und Dosentomaten köcheln mit Kreuzkümmel und Knoblauch,
+  eine Scheibe Sauerteigbrot bindet die Suppe, Koriandergrün und Olivenöl
+  runden sie ab.
+lang: de
+author: Yotam Ottolenghi & Sami Tamimi
+date_published: 2026-07-20   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/tomatensuppe-mit-sauerteigbrot.jpg]
+image_credit:
+  name: Bremer Gewürzhandel
+  url: https://static.bremer-gewuerzhandel.de/media/51/b0/21/1719994725/suppe-tomaten-mediterran-00072-00046-01304.webp
+category: Vorspeise
+dish_type: Suppe
+cuisine: israelisch
+keywords: [tomaten, suppe, sauerteigbrot, kreuzkümmel, koriander, jerusalem]
+diet: [vegan, vegetarian, lactose_free]
+difficulty: einfach
+times: { prep: 15, cook: 30 }
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+steps:
+  - text: >
+      {oel} in einem mittelgrossen Topf erhitzen und {zwiebel} etwa
+      5 Minuten unter häufigem Rühren glasig anschwitzen.
+    ingredients:
+      - { id: oel, amount: 2, unit: EL, item: Olivenöl }
+      - { id: zwiebel, amount: 1, item: grosse Zwiebel, note: "ca. 250 g, gehackt" }
+
+  - text: >
+      {kreuzkuemmel} und {knoblauch} dazugeben und 2 Minuten mitbraten.
+      {bruehe} angiessen, {tomaten}, {dosentomaten} sowie {zucker}
+      hinzufügen und mit {salz} sowie {pfeffer} würzen.
+    ingredients:
+      - { id: kreuzkuemmel, amount: 1, unit: TL, item: Kreuzkümmelsamen }
+      - { id: knoblauch, amount: 2, item: Knoblauchzehen, note: zerdrückt }
+      - { id: bruehe, amount: 750, unit: ml, item: Gemüsebrühe }
+      - { id: tomaten, amount: 4, item: grosse reife Tomaten, note: "ca. 650 g, gehackt" }
+      - { id: dosentomaten, amount: 400, unit: g, item: Tomatenstücke aus der Dose }
+      - { id: zucker, amount: 1, unit: EL, item: Zucker }
+      - { id: salz, amount: 1, unit: TL, item: Salz, scalable: false }
+      - { id: pfeffer, amount: 1, unit: Prise, item: schwarzer Pfeffer, note: kräftig, scalable: false }
+
+  - text: >
+      Die Suppe zum Köcheln bringen und 20 Minuten köcheln lassen. Nach
+      der Hälfte der Zeit das in Stücke gebrochene {brot} hinzufügen.
+    ingredients:
+      - { id: brot, amount: 40, unit: g, item: Sauerteigbrot, note: 1 Scheibe }
+
+  - text: >
+      Zum Schluss {koriander} unterrühren. Die Suppe kurz im Mixer
+      pürieren — sie sollte noch Tomatenstücke enthalten und relativ dick
+      sein. Falls nötig, mit etwas Wasser verdünnen.
+    ingredients:
+      - { id: koriander, amount: 2, unit: EL, item: gehacktes Koriandergrün }
+
+  - text: >
+      Mit {oel_betraeufeln} beträufeln und mit {koriander} bestreuen.
+    ingredients:
+      - { id: oel_betraeufeln, item: Olivenöl }
+      - { id: koriander, amount: 1, unit: EL, item: gehacktes Koriandergrün }
+
+equipment: [mittelgrosser Topf, Mixer]
+source:
+  name: Jerusalem — Yotam Ottolenghi & Sami Tamimi
+  url: null
+notes: >
+  Das Rezept stammt von Yotams Mutter Ruth, einer typischen jüdischen
+  Jerusalemer Köchin. Mehr als diese überschaubare Auswahl an Zutaten
+  braucht es nicht für eine ausgesprochen köstliche Suppe.

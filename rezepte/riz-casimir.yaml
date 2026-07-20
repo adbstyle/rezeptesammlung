@@ -1,0 +1,86 @@
+id: riz-casimir
+title: Riz Casimir
+description: >
+  Schweizer Klassiker der exotischen Art: Riz Casimir mit Currysauce,
+  Banane, Fruchtcocktail, Poulet-Minifilets, Rahm, Ingwer und Koriander.
+lang: de
+author: Daniel Tinembart
+date_published: 2026-07-20   # Migusto-PDF ohne Datum — Erfassungsdatum
+images: [images/riz-casimir.jpg]
+category: Hauptgericht
+cuisine: Schweiz
+occasions: [familie]
+keywords: [curry, poulet, banane, fruchtcocktail, klassiker, reis]
+difficulty: einfach
+times: { prep: 15, cook: 15 }   # Original: Zubereitung ca. 30 Minuten
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+nutrition:
+  calories: 430
+  protein: 34
+  carbohydrates: 23
+  fat: 22
+
+steps:
+  - text: >
+      {schalotte}, {knoblauch} und {ingwer} hacken. {fruchtcocktail} in
+      ein Sieb abgiessen, Saft auffangen.
+    ingredients:
+      - { id: schalotte, amount: 1, item: Schalotte }
+      - { id: knoblauch, amount: 2, item: Knoblauchzehen }
+      - { id: ingwer, amount: 10, unit: g, item: Ingwer }
+      - { id: fruchtcocktail, amount: 300, unit: g, item: Fruchtcocktail, note: "2 Dosen à 220 g, Abtropfgewicht" }
+
+  - text: >
+      Die Hälfte der Bratbutter ({bratbutter}) in einer Pfanne erhitzen.
+      Schalotte, Knoblauch, Ingwer und {curry} dazugeben und ca. 1 Minute
+      dünsten. {mehl} dazugeben und kurz mitdünsten. Mit {bouillon} und
+      dem aufgefangenen Fruchtsaft ablöschen. Sauce kochen, bis sie leicht
+      bindet.
+    ingredients:
+      - { id: bratbutter, amount: 2, unit: EL, item: Bratbutter }
+      - { id: curry, amount: 2, unit: EL, item: Curry mild }
+      - { id: mehl, amount: 3, unit: TL, item: Mehl }
+      - { id: bouillon, amount: 2, unit: dl, item: Geflügelbouillon }
+
+  - text: >
+      {rahm} und Fruchtcocktail dazugeben. Mit {salz} und {pfeffer}
+      abschmecken. Sauce bei kleiner Hitze kurz unter dem Siedepunkt
+      halten.
+    ingredients:
+      - { id: rahm, amount: 1, unit: dl, item: Rahm }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: Pfeffer }
+
+  - text: >
+      {poulet} in ca. 2 cm grosse Stücke, {banane} in Scheiben schneiden.
+    ingredients:
+      - { id: poulet, amount: 500, unit: g, item: Poulet-Minifilets }
+      - { id: banane, amount: 1, item: Banane }
+
+  - text: >
+      In einer Bratpfanne die restliche Bratbutter ({bratbutter})
+      erhitzen. Fleisch dazugeben und 2 Minuten braten. Mit Salz und
+      Pfeffer abschmecken.
+    ingredients:
+      - { id: bratbutter, amount: 2, unit: EL, item: Bratbutter }
+
+  - text: >
+      Fleisch zur Sauce geben und ca. 5 Minuten durchziehen lassen.
+
+  - text: >
+      In derselben Bratpfanne die Bananenscheiben braten, bis sie etwas
+      Farbe annehmen.
+
+  - text: >
+      Riz Casimir mit den Bananen anrichten. Nach Belieben mit {koriander}
+      garnieren. Dazu passt Reis.
+    ingredients:
+      - { id: koriander, amount: 0.5, unit: Bund, item: Koriander }
+
+equipment: [Pfanne, Bratpfanne, Sieb]
+source:
+  name: Migusto (Migros)
+  url: https://migusto.migros.ch/de/rezepte/riz-casimir

@@ -4,8 +4,8 @@ Persönliche Rezeptsammlung als strukturierte YAML-Dateien mit Validierung und
 PDF-Build. Jedes Rezept ist eine Datei in [rezepte/](rezepte/), die Zutaten
 werden direkt in den Zubereitungsschritten deklariert — die Zutatenliste wird
 daraus automatisch generiert. Das Datenmodell ist in der
-[Design-Spec](docs/superpowers/specs/2026-07-19-rezept-datenmodell-design.md)
-beschrieben.
+[Spezifikation](docs/spezifikation.md) beschrieben (gültige, massgebliche
+Fassung).
 
 ## Setup
 
@@ -95,6 +95,6 @@ rezepte/            Rezept-YAMLs + images/
 schema/             JSON Schema (recipe.schema.json) + Einheiten (units.yaml)
 scripts/            validate.py, build_pdf.py
 scripts/lib/        Gemeinsame Lade-, Skalierungs- und Renderlogik
-docs/               Design-Spec zum Datenmodell
+docs/               spezifikation.md — massgebliche Spezifikation
 build/              Generierte PDFs (nicht eingecheckt)
 ```

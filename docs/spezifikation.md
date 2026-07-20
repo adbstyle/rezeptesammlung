@@ -1,8 +1,14 @@
-# Rezeptsammlung — Datenmodell & Pipeline (Design-Spec)
+# Rezeptsammlung — Datenmodell & Pipeline (Spezifikation)
 
-**Datum:** 2026-07-19
-**Status:** Entwurf zur Review
+**Version:** 1.0 — gültig
+**Erstfassung:** 2026-07-19 · **Zuletzt aktualisiert:** 2026-07-20
 **Repo:** https://github.com/adbstyle/rezeptesammlung
+
+Dies ist die **gültige, massgebliche Spezifikation** des Datenmodells und der
+Build-Pipeline. Sie beschreibt den umgesetzten Stand, nicht mehr einen Entwurf.
+`schema/recipe.schema.json` ist die maschinenlesbare Durchsetzung dieses
+Dokuments; bei Abweichungen gilt das Schema als Referenz. Änderungen am Modell
+werden zuerst hier und im Schema festgehalten.
 
 ## 1. Ziel
 
@@ -54,7 +60,7 @@ rezeptesammlung/
 ├── book/
 │   ├── metadata.yaml         # buchtitel, autor, copyright
 │   └── layout.yaml           # kapitel-reihenfolge (liste von rezept-ids)
-└── docs/superpowers/specs/   # design-dokumente
+└── docs/spezifikation.md     # diese spezifikation
 ```
 
 ## 4. Feldkatalog (Rezept-Datei)
@@ -348,8 +354,26 @@ Generierte Zutatenliste daraus (4 Personen):
 - **Keine Nährwert-Berechnung**, nur optionale manuelle Erfassung.
 - **Keine interaktive Web-Skalierung im ersten Wurf** (Kap. 8).
 
-## 13. Nächste Schritte
+## 13. Umsetzungsstand
 
-1. Review dieser Spec
-2. Implementierungsplan (Reihenfolge: `recipe.schema.json` + `units.yaml` →
-   `validate.py` → Beispielrezepte → `build_pdf.py` → `build_web.py`)
+**Umgesetzt und in Betrieb:**
+
+- `schema/recipe.schema.json` + `schema/units.yaml` — Feldkatalog und
+  Einheiten, maschinenlesbar durchgesetzt.
+- `scripts/validate.py` — alle Validierungsregeln aus Kap. 7.
+- `scripts/lib/recipe.py` — Skalierung, generierte Zutatenliste,
+  `{id}`-Ersetzung, Anzeige-Rundung.
+- `scripts/build_pdf.py` — PDF-Pipeline (YAML → Markdown → Pandoc → PDF),
+  Einzelrezept und Gesamtbuch, `--servings` für skalierte Ausgaben.
+- Rezeptsammlung in `rezepte/` (laufend erweitert).
+
+**Erweiterungen gegenüber der Erstfassung** (aus realen Rezept-Importen
+hervorgegangen): Klassifikation `dish_type`/`season`/`occasions` (Kap. 4.7),
+Zutaten ohne Menge = „nach Belieben" (Kap. 4.4), `image_credit` für
+Fremdbilder (Kap. 4.1), menschenlesbare Dauer-Anzeige (Std./Min.).
+
+**Offen / möglich:**
+
+- `scripts/build_web.py` — statische HTML-Seiten + JSON-LD (Kap. 10.2).
+- Datenbank-Import (Kap. 10.3), interaktive Web-Skalierung (Kap. 8),
+  Einkaufslisten-Aggregation über mehrere Rezepte.

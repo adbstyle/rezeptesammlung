@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/adbstyle/rezeptesammlung/schema/recipe.schema.json",
   "title": "Rezept",
-  "description": "Rezept-Datei gemäss Design-Spec 2026-07-19 (Kap. 4). Mengen leben in den Schritten; die Zutatenliste wird generiert.",
+  "description": "Rezept-Datei gemäss Spezifikation docs/spezifikation.md (Kap. 4). Mengen leben in den Schritten; die Zutatenliste wird generiert.",
   "type": "object",
   "additionalProperties": false,
   "required": ["id", "title", "description", "lang", "author", "date_published", "images", "category", "times", "yield", "steps"],

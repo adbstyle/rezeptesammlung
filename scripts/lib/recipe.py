@@ -1,6 +1,6 @@
 """Gemeinsame Lade-, Skalierungs- und Renderlogik der Rezept-Pipeline.
 
-Implementiert die Spec docs/superpowers/specs/2026-07-19-rezept-datenmodell-design.md:
+Implementiert die Spec docs/spezifikation.md:
 Referenz-Syntax (Kap. 5), generierte Zutatenliste (Kap. 6),
 Skalierung & Anzeige-Rundung (Kap. 8). Wird von build_pdf.py und
 später build_web.py verwendet.

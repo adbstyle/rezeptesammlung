@@ -1,0 +1,72 @@
+id: caponatina-di-melanzane
+title: Caponatina di melanzane
+description: >
+  Sizilianisches Auberginengemüse — das Originalrezept aus Palermo für
+  eines der populärsten Auberginengerichte Siziliens. Süss-sauer
+  eingekocht mit Tomaten, Oliven, Kapern und Mandeln.
+lang: de
+author: Überliefert (Palermo)
+date_published: 2026-07-20   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/caponatina-di-melanzane.jpg]
+image_credit:
+  name: Karen and Brad Emerson
+  license: CC BY 2.0
+  url: https://commons.wikimedia.org/wiki/File:Caponata_(14049113982).jpg
+category: Vorspeise
+cuisine: Italien
+keywords: [caponata, auberginen, sizilien, antipasto, süss-sauer]
+diet: [vegan, vegetarian, gluten_free, lactose_free]
+difficulty: mittel
+times: { prep: 20, cook: 40, rest: 60 }   # geschätzt; rest = 1 h Auberginen wässern
+yield:
+  servings: 4
+  description: Für 4–6 Personen
+
+steps:
+  - text: >
+      {auberginen} in walnussgrosse Würfel schneiden. Für 1 Stunde in
+      Salzwasser ({salz}) einlegen, dann abseihen, ausdrücken und
+      trockentupfen.
+    ingredients:
+      - { id: auberginen, amount: 600, unit: g, item: fleischige Auberginen }
+      - { id: salz, item: Salz }
+
+  - text: >
+      In einer Pfanne mit hohem Rand {olivenoel} erhitzen und die
+      Auberginen goldbraun braten. Mit einer Schaumkelle herausnehmen und
+      beiseitelegen.
+    ingredients:
+      - { id: olivenoel, amount: 6, unit: EL, item: Olivenöl, note: plus mehr nach Bedarf }
+
+  - text: >
+      In derselben Pfanne {zwiebel} weich schwitzen, bei Bedarf etwas mehr
+      Öl hinzugiessen. {sellerie}, {tomaten}, {oliven}, {kapern},
+      {mandeln}, {birnen}, {zimt} und {gewuerznelken} dazugeben und das
+      Ganze etwa 20 Minuten köcheln lassen.
+    ingredients:
+      - { id: zwiebel, amount: 1, item: grosse Zwiebel, note: in Scheiben geschnitten }
+      - { id: sellerie, amount: 2, item: Bleichselleriestauden, note: "nur die Herzen, in kleine Stücke geschnitten" }
+      - { id: tomaten, amount: 500, unit: g, item: reife Tomaten, note: gehackt }
+      - { id: oliven, amount: 100, unit: g, item: entsteinte grüne Oliven }
+      - { id: kapern, amount: 60, unit: g, item: Kapern in Salz, note: abgespült }
+      - { id: mandeln, amount: 100, unit: g, item: Mandelblättchen }
+      - { id: birnen, amount: 2, item: "reife, aber feste Birnen", note: "geschält, entkernt, in Scheiben geschnitten" }
+      - { id: zimt, amount: 0.5, unit: TL, item: Zimtpulver }
+      - { id: gewuerznelken, amount: 0.5, unit: TL, item: gemahlene Gewürznelken }
+
+  - text: >
+      Die Auberginen mit {zucker} und {essig} in die Pfanne geben. Mit
+      {salz} abschmecken und noch 10–15 Minuten schmoren.
+    ingredients:
+      - { id: zucker, amount: 50, unit: g, item: extrafeiner Zucker }
+      - { id: essig, amount: 50, unit: ml, item: Weissweinessig }
+      - { id: salz, item: Salz }
+
+source:
+  name: Originalrezept aus Palermo
+  url: null
+notes: >
+  Als Vorspeise mit Brot oder als Beilage zu warmem/kaltem Fleisch oder
+  Fisch; in der Familie mit Couscous serviert. Schmeckt auch kalt
+  vorzüglich. Möglichst blassviolette Auberginen mit wenig Kernen
+  verwenden.

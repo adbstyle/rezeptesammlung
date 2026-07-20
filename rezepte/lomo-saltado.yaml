@@ -1,0 +1,80 @@
+id: lomo-saltado
+title: Lomo Saltado
+description: >
+  Perus beliebtestes Wok-Gericht: mariniertes Rindfleisch scharf
+  angebraten mit Zwiebeln, Tomaten und Chili, abgelöscht mit Pisco — eine
+  Verschmelzung aus chinesischem Soja und peruanischen Aromen.
+lang: de
+author: Überliefert (Peru)
+date_published: 2026-07-20   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/lomo-saltado.jpg]
+image_credit:
+  name: GradFood
+  url: https://gradfood.com/lomo-saltado/
+category: Hauptgericht
+cuisine: peruanisch
+keywords: [lomo saltado, rind, wok, peru, pfannengericht]
+difficulty: mittel
+times: { prep: 20, cook: 10, rest: 240 }   # rest = 4 h marinieren
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+steps:
+  - section: Marinade
+    text: >
+      Für die Marinade {knoblauch}, {sojasauce}, {rotweinessig},
+      {worcester}, {oregano}, {kumin}, {wasser}, {salz} und {pfeffer} in
+      einer Schüssel vermengen. Das Fleisch hinzufügen und vermengen,
+      sodass es gut bedeckt ist. Ca. 4 Stunden im Kühlschrank marinieren.
+    ingredients:
+      - { id: knoblauch, amount: 4, item: Knoblauchzehen, note: gehackt }
+      - { id: sojasauce, amount: 150, unit: ml, item: Sojasauce }
+      - { id: rotweinessig, amount: 30, unit: ml, item: Rotweinessig }
+      - { id: worcester, amount: 2, unit: TL, item: Worcestershiresauce }
+      - { id: oregano, amount: 0.5, unit: TL, item: getrockneter Oregano }
+      - { id: kumin, amount: 0.5, unit: TL, item: gemahlener Kumin, note: Kreuzkümmel }
+      - { id: wasser, amount: 2, unit: EL, item: Wasser }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: frisch gemahlener schwarzer Pfeffer }
+
+  - section: Wok-Gericht
+    text: >
+      Fleisch abtropfen lassen, die Marinade aufbewahren. {oel} im Wok bei
+      grosser Hitze erhitzen, bis es gerade zu rauchen beginnt, dann
+      {fleisch} hineingeben — Vorsicht, das Öl kann spritzen. So schnell
+      wie möglich garen, dabei den Wok schwenken, bis das Fleisch rundum
+      gebräunt ist.
+    ingredients:
+      - { id: oel, item: Pflanzenöl, note: zum Frittieren }
+      - { id: fleisch, amount: 600, unit: g, item: Filetsteak, note: in 3-cm-Würfel geschnitten }
+
+  - section: Wok-Gericht
+    text: >
+      {zwiebel} hinzufügen und 1 Minute kochen. {tomaten}, {chili} und
+      {pisco} dazugeben.
+    ingredients:
+      - { id: zwiebel, amount: 1, item: grosse rote Zwiebel, note: in dicke Spalten geschnitten }
+      - { id: tomaten, amount: 2, item: Tomaten, note: "halbiert, entkernt, längs in Achtel geschnitten" }
+      - { id: chili, amount: 1, item: Amarillo-Chili, note: "entkernt, längs in Scheiben geschnitten" }
+      - { id: pisco, amount: 20, unit: ml, item: Pisco }
+
+  - section: Wok-Gericht
+    text: >
+      Die aufbewahrte Marinade darübergiessen, Hitze herunterschalten und
+      das Fleisch einige Minuten in der Sauce liegen lassen. Mit
+      {koriander} und {petersilie} garnieren. Nach peruanischer Tradition
+      mit Pommes frites und weissem Reis servieren.
+    ingredients:
+      - { id: koriander, amount: 25, unit: g, item: Korianderblätter, note: fein gehackt }
+      - { id: petersilie, amount: 10, unit: g, item: glatte Petersilie, note: fein gehackt }
+
+equipment: [Wok, Schüssel]
+source:
+  name: Peruanisches Originalrezept
+  url: null
+notes: >
+  Für Rauchgeschmack Fleisch und Gemüse flambieren, während der Pisco
+  hinzugegeben wird: die Pfanne sehr vorsichtig in die Gasflamme kippen,
+  sodass sie Feuer fängt, und kräftig umrühren. Ohne Gasherd die Pfanne
+  vorher so heiss wie möglich werden lassen.

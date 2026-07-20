@@ -18,6 +18,16 @@
       "minItems": 1,
       "items": { "type": "string", "pattern": "^images/.+\\.(jpg|jpeg|png)$" }
     },
+    "image_credit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "license": { "type": "string" },
+        "url": { "type": ["string", "null"] }
+      }
+    },
     "category": { "enum": ["Apéro", "Vorspeise", "Hauptgericht", "Beilage", "Dessert", "Brunch & Frühstück", "Getränk"] },
     "dish_type": { "enum": ["Salat", "Suppe", "Eintopf", "Pasta", "Risotto", "Auflauf & Gratin", "Burger", "Kuchen & Torten", "Brot & Zopf", "Gebäck", "Glace"] },
     "cuisine": { "type": "string" },

@@ -271,4 +271,14 @@ def render_markdown(recipe: dict, factor: float, units: dict[str, str],
             reference += f" — {source['url']}"
         out += [f"*Quelle: {reference}*", ""]
 
+    if recipe.get("image_credit"):
+        credit = recipe["image_credit"]
+        parts = [credit["name"]]
+        if credit.get("license"):
+            parts.append(credit["license"])
+        line = "Bild: " + ", ".join(parts)
+        if credit.get("url"):
+            line += f" — {credit['url']}"
+        out += [f"*{line}*", ""]
+
     return "\n".join(out)

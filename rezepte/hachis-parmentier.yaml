@@ -1,0 +1,69 @@
+id: hachis-parmentier
+title: Hachis Parmentier
+description: >
+  Französischer Kartoffel-Hackfleisch-Auflauf: würzige Hackfleischfüllung
+  mit Tomaten unter einer cremigen Kartoffelmasse, mit Käse überbacken.
+lang: de
+author: Swissmilk
+date_published: 2008-04-01
+images: [images/hachis-parmentier.jpg]
+category: Hauptgericht
+dish_type: Auflauf & Gratin
+cuisine: Frankreich
+keywords: [hackfleisch, kartoffeln, auflauf, gratin, familie]
+occasions: [familie]
+difficulty: einfach
+times: { prep: 50, cook: 30 }
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+nutrition:
+  calories: 587
+  protein: 32
+  carbohydrates: 43
+  fat: 32
+
+steps:
+  - section: Hackfleischfüllung
+    text: >
+      {hackfleisch} in der heissen {bratbutter} anbraten, {zwiebel}
+      mitbraten. Mit {pelati} samt Saft und {bouillon} ablöschen.
+      3 Minuten unter ständigem Rühren kochen. Mit {salz_fuellung} und
+      {pfeffer_fuellung} abschmecken und in die Form füllen.
+    ingredients:
+      - { id: hackfleisch, amount: 500, unit: g, item: Rindshackfleisch }
+      - { id: bratbutter, item: Bratbutter }
+      - { id: zwiebel, amount: 1, item: Zwiebel, note: gehackt }
+      - { id: pelati, amount: 400, unit: g, item: gehackte Pelati, note: 1 Dose à 400 g }
+      - { id: bouillon, amount: 1, unit: dl, item: Gemüsebouillon }
+      - { id: salz_fuellung, item: Salz }
+      - { id: pfeffer_fuellung, item: Pfeffer }
+
+  - section: Kartoffelmasse
+    text: >
+      {kartoffeln} in reichlich Salzwasser garen, abgiessen. {butter} und
+      {milch} dazugeben. Mit Kartoffelstampfer und Schwingbesen sämig und
+      cremig schlagen, mit {salz_kartoffeln} und {pfeffer_kartoffeln}
+      würzen. Auf die Füllung verteilen, glatt streichen und mit
+      {reibkaese} bestreuen.
+    ingredients:
+      - { id: kartoffeln, amount: 1, unit: kg, item: mehligkochende Kartoffeln, note: in Stücken }
+      - { id: butter, amount: 50, unit: g, item: Butter }
+      - { id: milch, amount: 6, unit: EL, item: Milch }
+      - { id: salz_kartoffeln, item: Salz }
+      - { id: pfeffer_kartoffeln, item: Pfeffer }
+      - { id: reibkaese, item: Reibkäse, note: zum Bestreuen }
+
+  - section: Kartoffelmasse
+    text: >
+      In der Mitte des auf 200 °C vorgeheizten Ofens 30–35 Minuten
+      goldbraun und knusprig backen.
+
+equipment: [Gratinform, Kartoffelstampfer, Schwingbesen]
+source:
+  name: Swissmilk
+  url: https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/LM200804_68/hachis-parmentier/
+notes: >
+  Statt Rinds- Lammhackfleisch verwenden — dann heisst das Gericht
+  Shepherd's Pie.

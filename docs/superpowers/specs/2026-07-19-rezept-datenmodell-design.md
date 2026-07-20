@@ -70,6 +70,7 @@ rezeptesammlung/
 | `author` | string | ✓ | `author.name` |
 | `date_published` | date (ISO) | ✓ | `datePublished` |
 | `images` | list\<pfad relativ zu `rezepte/`\> | ✓ (min. 1) | `image` (Google: Pflicht) |
+| `image_credit` | objekt `{name, license, url}` | – | – (Bildnachweis) |
 | `category` | enum: Gang (Kap. 4.7) | ✓ | `recipeCategory` |
 | `dish_type` | enum: Gerichtsart (Kap. 4.7) | – | `keywords` |
 | `cuisine` | string (z. B. Schweiz) | – | `recipeCuisine` |

@@ -1,0 +1,68 @@
+id: arabische-kartoffelpaste
+title: Arabische Kartoffelpaste
+description: >
+  Warmes Kartoffelpüree, orientalisch gewürzt mit Cumin und Harissa,
+  angerichtet auf Radicchio und Radieschen und bestreut mit gerösteten
+  Pinienkernen. Lauwarm oder kalt als Mezze oder Vorspeise.
+lang: de
+author: Gräfe und Unzer
+date_published: 2026-07-20   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/arabische-kartoffelpaste.jpg]
+category: Vorspeise
+cuisine: orientalisch
+keywords: [kartoffeln, mezze, harissa, radicchio, pinienkerne]
+diet: [vegan, vegetarian, gluten_free, lactose_free]
+difficulty: einfach
+times: { prep: 25, cook: 20 }   # Original nennt nur Zubereitungszeit 45 Min. gesamt
+yield:
+  servings: 4
+  description: Für 4 Personen
+
+nutrition:
+  calories: 280
+
+steps:
+  - text: >
+      {kartoffeln} schälen, in gleichmässige Stücke schneiden und in
+      Salzwasser ({salz}) in ca. 20 Minuten gar kochen.
+    ingredients:
+      - { id: kartoffeln, amount: 800, unit: g, item: mehligkochende Kartoffeln }
+      - { id: salz, item: Salz }
+
+  - text: >
+      Inzwischen {radicchio} und {radieschen} waschen, putzen und klein
+      hacken. {petersilie} waschen, trockenschütteln und grob schneiden.
+      {pinienkerne} in einer Pfanne ohne Fett goldgelb rösten.
+      {zitronensaft} mit {olivenoel}, {cumin}, {harissa}, {pfeffer} und
+      etwas {salz} verrühren.
+    ingredients:
+      - { id: radicchio, amount: 1, item: Kopf Radicchio, note: ca. 200 g }
+      - { id: radieschen, amount: 1, unit: Bund, item: Radieschen }
+      - { id: petersilie, amount: 1, unit: Bund, item: glatte Petersilie }
+      - { id: pinienkerne, amount: 40, unit: g, item: Pinienkerne }
+      - { id: zitronensaft, amount: 2, unit: EL, item: Zitronensaft }
+      - { id: olivenoel, amount: 3, unit: EL, item: Olivenöl }
+      - { id: cumin, amount: 1.5, unit: TL, item: gemahlener Cumin }
+      - { id: harissa, amount: 1, unit: TL, item: Harissa, note: nach Schärfe 1–2 TL }
+      - { id: pfeffer, item: frisch gemahlener schwarzer Pfeffer }
+      - { id: salz, item: Salz }
+
+  - text: >
+      Die Kartoffeln abgiessen und etwas ausdampfen lassen. Noch heiss mit
+      dem Kartoffelstampfer zu Püree stampfen und mit der Sauce mischen.
+
+  - text: >
+      Radicchio, Radieschen und Petersilie auf einer Platte verteilen und
+      die Kartoffelpaste darauf anrichten. Mit dem restlichen {olivenoel}
+      beträufeln und mit den Pinienkernen bestreuen. Lauwarm oder kalt
+      servieren.
+    ingredients:
+      - { id: olivenoel, amount: 1, unit: EL, item: Olivenöl }
+
+equipment: [Kartoffelstampfer, Pfanne]
+source:
+  name: Küchengötter (Gräfe und Unzer)
+  url: https://www.kuechengoetter.de/rezepte/arabische-kartoffelpaste-2367
+notes: >
+  Am besten mehligkochende, stärkereiche Kartoffelsorten verwenden. Die
+  Harissa-Menge nach gewünschter Schärfe dosieren.

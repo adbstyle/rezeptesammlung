@@ -1,0 +1,62 @@
+id: omeletten
+title: Omeletten
+description: >
+  Dünne Schweizer Omeletten (Crêpes) aus einem einfachen Teig aus Mehl,
+  Milch und Eiern. Klassisch mit Zimtzucker, dazu passen Apfelmus oder
+  Konfitüre — oder pikant mit einer herzhaften Füllung.
+lang: de
+author: Betty Bossi
+date_published: 2026-07-20   # Rezept ohne Datum — Erfassungsdatum
+images: [images/omeletten.jpg]
+category: Hauptgericht
+cuisine: Schweiz
+keywords: [omeletten, crêpes, pfannkuchen, zimtzucker, betty bossi]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 30, rest: 30 }   # Quellzeit des Teigs
+yield:
+  servings: 4
+  description: Für 4 Personen (ca. 8 Stück)
+
+# Betty Bossi gibt die Nährwerte pro Stück an (178 kcal, F 6, Kh 22, E 8);
+# bei ca. 8 Stück auf 4 Personen = 2 Stück pro Portion, hier umgerechnet.
+nutrition:
+  calories: 356
+  protein: 16
+  carbohydrates: 44
+  fat: 12
+
+steps:
+  - text: >
+      {mehl} und {salz} in einer Schüssel mischen. {milch} und {eier}
+      beigeben und mit den Schwingbesen des Handrührgeräts rühren, bis der
+      Teig glatt ist. Teig zugedeckt ca. 30 Minuten quellen lassen.
+    ingredients:
+      - { id: mehl, amount: 200, unit: g, item: Mehl }
+      - { id: salz, amount: 0.5, unit: TL, item: Salz }
+      - { id: milch, amount: 4, unit: dl, item: Milch }
+      - { id: eier, amount: 4, item: Eier, note: frisch }
+
+  - text: >
+      Wenig {bratbutter} in einer beschichteten Bratpfanne heiss werden
+      lassen. So viel Teig in die Pfanne geben, dass der Boden dünn
+      überzogen ist, dann die Hitze reduzieren. Ist die Unterseite gebacken
+      und löst sie sich von selbst, die Omelette wenden und fertig backen,
+      danach zugedeckt warm stellen. Mit dem restlichen Teig gleich
+      verfahren.
+    ingredients:
+      - { id: bratbutter, item: Bratbutter, note: zum Backen }
+
+  - text: >
+      {zucker} und {zimt} mischen und zu den Omeletten servieren.
+    ingredients:
+      - { id: zucker, amount: 1, unit: EL, item: Zucker }
+      - { id: zimt, amount: 1, unit: TL, item: Zimt }
+
+equipment: [Handrührgerät, beschichtete Bratpfanne]
+source:
+  name: Betty Bossi
+  url: https://www.bettybossi.ch/de/rezepte/rezept/omeletten-10007440/
+notes: >
+  Dazu passen Apfelmus, Haselnussaufstrich oder Konfitüre. Ohne
+  Zimtzucker auch pikant mit Hackfleisch- oder Gemüsesauce servieren.

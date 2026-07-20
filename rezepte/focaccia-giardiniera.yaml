@@ -1,0 +1,86 @@
+id: focaccia-giardiniera
+title: Focaccia Giardiniera
+description: >
+  Luftige Hefe-Focaccia vom Blech, belegt mit Zucchini, Paprika,
+  Champignons, schwarzen Oliven und Rosmarin — grosszügig mit Olivenöl und
+  Fleur de Sel. Je nach Saison mit anderem Gemüse zu variieren.
+lang: de
+author: tibits
+date_published: 2026-07-20   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/focaccia-giardiniera.jpg]
+image_credit:
+  name: Pexels
+  url: https://www.pexels.com/photo/32944460/
+category: Beilage
+dish_type: Brot & Zopf
+cuisine: Italien
+keywords: [focaccia, hefeteig, gemüse, blech, tibits]
+diet: [vegan, vegetarian, lactose_free]
+difficulty: mittel
+times: { prep: 20, cook: 25, rest: 50 }   # rest = 15 + 35 Min. Gehzeit; Backzeit 20–25 Min.
+yield:
+  servings: 4
+  description: 1 Blech à 28 cm (ca. 4 Personen)
+
+steps:
+  - section: Teig
+    text: >
+      Für den Teig {mehl} mit {salz_teig} vermischen und in der Mitte eine
+      Mulde formen. {hefe} zerbröckeln, mit {zucker} und {wasser} verrühren,
+      in die Mulde geben und mit wenig Mehl vom Rand vermischen. Abgedeckt
+      an einem warmen Ort 15 Minuten gehen lassen.
+    ingredients:
+      - { id: mehl, amount: 400, unit: g, item: Weizenmehl }
+      - { id: salz_teig, amount: 1, unit: TL, item: Salz }
+      - { id: hefe, amount: 20, unit: g, item: frische Hefe, scalable: false }
+      - { id: zucker, amount: 0.5, unit: TL, item: Zucker, scalable: false }
+      - { id: wasser, amount: 50, unit: ml, item: Wasser, note: lauwarm }
+
+  - section: Teig
+    text: >
+      Dann {wasser} und {olivenoel_teig} beifügen und alles gründlich zu
+      einem Teig kneten. Die Schüssel mit einem feuchten Tuch bedecken und
+      den Teig an einem warmen Ort weitere 30–40 Minuten aufgehen lassen.
+    ingredients:
+      - { id: wasser, amount: 150, unit: ml, item: Wasser, note: lauwarm }
+      - { id: olivenoel_teig, amount: 3, unit: EL, item: Olivenöl }
+
+  - section: Belag & Backen
+    text: Den Backofen auf 180 Grad vorheizen.
+
+  - section: Belag & Backen
+    text: >
+      {zucchini} waschen, putzen, halbieren und in 1 cm dicke Stücke
+      schneiden. {peperoni} halbieren, entkernen, waschen und in 2½ cm
+      dicke Streifen schneiden. {champignons} feucht abreiben. {oliven}
+      entsteinen und halbieren. {rosmarin} waschen, trocken schütteln, die
+      Nadeln abzupfen und zusammen mit dem Gemüse in eine Schüssel geben.
+      {olivenoel_belag} sowie {salz_belag} und {pfeffer} zum Gemüse geben
+      und gut vermischen.
+    ingredients:
+      - { id: zucchini, amount: 170, unit: g, item: Zucchini }
+      - { id: peperoni, amount: 230, unit: g, item: rote Peperoni, note: Paprikaschoten }
+      - { id: champignons, amount: 200, unit: g, item: Champignons }
+      - { id: oliven, amount: 50, unit: g, item: schwarze Oliven }
+      - { id: rosmarin, amount: 2, item: Zweige Rosmarin }
+      - { id: olivenoel_belag, amount: 3, unit: EL, item: Olivenöl }
+      - { id: salz_belag, item: Salz }
+      - { id: pfeffer, item: Pfeffer aus der Mühle }
+
+  - section: Belag & Backen
+    text: >
+      Den aufgegangenen Teig auf ein mit {olivenoel_blech} bestrichenes
+      Blech geben, ohne ihn vorher zu kneten oder zu bemehlen, und mit den
+      Fingern flach drücken, sodass das ganze Blech ausgefüllt ist. Das
+      Gemüse auf dem Teig verteilen und die Focaccia im Ofen 20–25 Minuten
+      backen. Mit {fleur_de_sel} garnieren und servieren.
+    ingredients:
+      - { id: olivenoel_blech, item: Olivenöl, note: für das Blech }
+      - { id: fleur_de_sel, item: Fleur de Sel }
+
+source:
+  name: tibits — Kochen. Teilen. Geniessen.
+  url: https://www.tibits.ch/de/rezepte/detail/focaccia-giardiniera
+notes: >
+  Die Focaccia lässt sich je nach Saison auch mit anderen Gemüsesorten
+  zubereiten.

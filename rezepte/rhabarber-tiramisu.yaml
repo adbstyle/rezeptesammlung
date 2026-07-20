@@ -1,0 +1,59 @@
+id: rhabarber-tiramisu
+title: Rhabarber-Tiramisu
+description: >
+  Frühlingshaftes Tiramisu nach handschriftlichem Familienrezept: In
+  Butter gedämpfter, süss pürierter Rhabarber wird mit einer
+  Quark-Mascarpone-Creme und in Orangensaft getränkten Löffelbiscuits
+  geschichtet.
+lang: de
+author: Familienrezept
+date_published: 2026-07-20   # handschriftliche Notiz ohne Datum — Erfassungsdatum
+images: [images/rhabarber-tiramisu.jpg]
+image_credit:
+  name: Migusto (Migros)
+  url: https://migusto.migros.ch/de/rezepte/rhabarber-tiramisu
+category: Dessert
+season: [fruehling]
+keywords: [rhabarber, tiramisu, mascarpone, quark, löffelbiscuits]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 30, cook: 10, rest: 180 }   # Kühlzeit geschätzt
+yield:
+  servings: 6
+  description: Für 6 Personen
+
+steps:
+  - text: >
+      {rhabarber} in wenig {butter} dämpfen.
+    ingredients:
+      - { id: rhabarber, amount: 600, unit: g, item: Rhabarber, note: in Würfeln }
+      - { id: butter, item: Butter, note: wenig }
+
+  - text: >
+      {zucker} dazugeben und aufkochen. Auskühlen lassen und kalt
+      pürieren.
+    ingredients:
+      - { id: zucker, amount: 120, unit: g, item: Zucker }
+
+  - text: >
+      {quark} und {mascarpone} glattrühren.
+    ingredients:
+      - { id: quark, amount: 250, unit: g, item: Halbfettquark }
+      - { id: mascarpone, amount: 250, unit: g, item: Mascarpone }
+
+  - text: >
+      {loeffelbiscuits} mit {orangensaft} tränken und den Boden einer
+      Form damit auslegen. Rhabarberpüree und Creme abwechselnd darüber
+      schichten, mit Creme abschliessen.
+    ingredients:
+      - { id: loeffelbiscuits, item: Löffelbiscuits }
+      - { id: orangensaft, amount: 1, unit: dl, item: Orangensaft }
+
+  - text: >
+      Zugedeckt mindestens 3 Stunden kühl stellen.
+
+equipment: [Gratinform oder Gläser, Stabmixer]
+source: { name: Familienrezept (handschriftliche Notiz), url: null }
+notes: >
+  Auf der Notiz steht zur Butter ausdrücklich «nicht zu viel!» — der
+  Rhabarber soll nur in wenig Butter gedämpft werden.

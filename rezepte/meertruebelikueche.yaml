@@ -1,0 +1,69 @@
+id: meertruebelikueche
+title: Meertrübeliküeche
+description: >
+  Schweizer Johannisbeerkuchen: ein knuspriger Mürbeteigboden, gefüllt mit
+  roten Meertrübeli, Nüssen und einer luftigen Baiser-Masse. Ein sommerlicher
+  Familienklassiker.
+lang: de
+author: Familienrezept
+date_published: 2026-07-20   # handschriftliche Notiz ohne Datum — Erfassungsdatum
+images: [images/meertruebelikueche.jpg]
+image_credit:
+  name: IgorCalzone1
+  license: CC BY-SA 4.0
+  url: https://commons.wikimedia.org/wiki/File:Johannisbeerkuchen_mit_Baiser.jpg
+category: Dessert
+dish_type: Kuchen & Torten
+cuisine: Schweiz
+keywords: [meertrübeli, johannisbeeren, ribisel, baiser, familienrezept]
+diet: [vegetarian]
+difficulty: mittel
+times: { prep: 30, cook: 40, rest: 60 }   # rest = 1 Std. Teig ruhen; cook = 10 Min. Boden + 30 Min. gefüllt
+yield:
+  servings: 12
+  description: 1 Torte (ca. 12 Stücke)
+
+steps:
+  - section: Teig
+    text: >
+      {butter}, {zucker_teig} und {eigelb} schaumig rühren.
+    ingredients:
+      - { id: butter, amount: 125, unit: g, item: Butter }
+      - { id: zucker_teig, amount: 75, unit: g, item: Zucker }
+      - { id: eigelb, amount: 4, item: Eigelb }
+
+  - section: Teig
+    text: >
+      {mehl} beifügen, rasch zu einem Teig zusammenfügen und zugedeckt
+      1 Stunde ruhen lassen.
+    ingredients:
+      - { id: mehl, amount: 250, unit: g, item: Mehl }
+
+  - section: Teig
+    text: >
+      Den Teig in eine Springform geben, den Boden mit einer Gabel
+      einstechen und ca. 10 Minuten bei 200 °C vorbacken (nur den Boden).
+
+  - section: Füllung
+    text: >
+      Für die Füllung {eiweiss} steif schlagen. {meertruebeli},
+      {zucker_fuellung} und {nuesse} vorsichtig darunterheben.
+    ingredients:
+      - { id: eiweiss, amount: 4, item: Eiweiss, note: steif geschlagen }
+      - { id: meertruebeli, amount: 700, unit: g, item: Meertrübeli, note: rote Johannisbeeren }
+      - { id: zucker_fuellung, amount: 125, unit: g, item: Zucker }
+      - { id: nuesse, amount: 125, unit: g, item: Haselnüsse oder Mandeln, note: gemahlen }
+
+  - section: Füllung
+    text: >
+      Die Füllung auf den vorgebackenen Boden in der Springform verteilen
+      und ca. 30 Minuten fertig backen.
+
+equipment: [Springform]
+source:
+  name: Familienrezept (handschriftliche Notiz)
+  url: null
+notes: >
+  „Anke" ist der Schweizer Ausdruck für Butter, „Meertrübeli" für rote
+  Johannisbeeren. Die Notiz nennt für das Fertigbacken keine Temperatur —
+  180 °C sind üblich.

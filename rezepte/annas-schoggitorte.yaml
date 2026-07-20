@@ -1,0 +1,52 @@
+id: annas-schoggitorte
+title: Annas Schoggitorte
+description: >
+  Dichte, saftige Schokoladentorte nach einem Familienrezept — viel Butter
+  und dunkle Schokolade, nur wenig Mehl. Innen fast fudge-artig.
+lang: de
+author: Anna
+date_published: 2026-07-20   # Familienrezept ohne Datum — Erfassungsdatum
+images: [images/annas-schoggitorte.jpg]
+image_credit:
+  name: Pexels
+  url: https://www.pexels.com/photo/27848148/
+category: Dessert
+dish_type: Kuchen & Torten
+cuisine: Schweiz
+keywords: [schoggitorte, schokolade, kuchen, familienrezept]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 20, cook: 30 }   # prep geschätzt; Original nennt nur die Backzeit
+yield:
+  servings: 8
+  description: 1 Torte (ca. 8 Stücke)
+
+steps:
+  - text: "{butter} und {zucker} gut verrühren."
+    ingredients:
+      - { id: butter, amount: 250, unit: g, item: Butter }
+      - { id: zucker, amount: 200, unit: g, item: Zucker }
+
+  - text: "{eier} dazurühren."
+    ingredients:
+      - { id: eier, amount: 3, item: Eier, note: gross }
+
+  - text: "{schokolade} schmelzen und darunterrühren."
+    ingredients:
+      - { id: schokolade, amount: 250, unit: g, item: dunkle Schokolade }
+
+  - text: "{mehl} dazusieben und unterheben."
+    ingredients:
+      - { id: mehl, amount: 70, unit: g, item: Mehl }
+
+  - text: >
+      Den Teig in eine gefettete Springform füllen und bei 180 °C ca.
+      30 Minuten backen.
+
+equipment: [Springform]
+source:
+  name: Familienrezept (Anna)
+  url: null
+notes: >
+  „Anke" ist der Schweizer Ausdruck für Butter. Die Torte bleibt innen
+  saftig — Stäbchenprobe darf noch leicht feucht sein.

@@ -1,0 +1,57 @@
+id: rhabarbertorte
+title: Rhabarbertorte
+description: >
+  Einfacher Rührteig-Kuchen mit Rhabarber nach handschriftlichem
+  Familienrezept: Butter, Zucker, Eier, Mehl und Backpulver, belegt mit
+  Rhabarberstücken, nach dem Backen mit Puderzucker bestäubt.
+lang: de
+author: Familienrezept
+date_published: 2026-07-20   # handschriftliche Notiz ohne Datum — Erfassungsdatum
+images: [images/rhabarbertorte.jpg]
+image_credit:
+  name: familienkost.de
+  url: https://www.familienkost.de/rezept_rhabarberkuchen.html
+category: Dessert
+dish_type: Kuchen & Torten
+season: [fruehling]
+keywords: [rhabarber, kuchen, rührteig, frühling]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 20, cook: 40 }
+yield:
+  servings: 12
+  description: 1 Torte (Springform ca. 26 cm)
+
+steps:
+  - text: >
+      {rhabarber} rüsten, fädeln und in kleine Stücke schneiden.
+    ingredients:
+      - { id: rhabarber, amount: 600, unit: g, item: Rhabarber, note: 500–600 g }
+
+  - text: >
+      {butter}, {zucker} und {vanillezucker} schaumig rühren. {eier}
+      einzeln darunterrühren.
+    ingredients:
+      - { id: butter, amount: 150, unit: g, item: Butter, note: weich }
+      - { id: zucker, amount: 150, unit: g, item: Zucker }
+      - { id: vanillezucker, amount: 1, item: Päckli Vanillezucker }
+      - { id: eier, amount: 3, item: Eier }
+
+  - text: >
+      {mehl} und {backpulver} mischen und unter die Masse rühren. Teig in
+      die ausgekleidete Springform füllen und die Rhabarberstücke darauf
+      verteilen.
+    ingredients:
+      - { id: mehl, amount: 150, unit: g, item: Mehl }
+      - { id: backpulver, amount: 2, unit: TL, item: Backpulver }
+
+  - text: >
+      Bei 180 °C auf der zweituntersten Rille ca. 40 Minuten backen.
+
+  - text: >
+      Ausgekühlt mit {puderzucker} bestäuben.
+    ingredients:
+      - { id: puderzucker, item: Puderzucker }
+
+equipment: [Springform (ca. 26 cm), Backpapier]
+source: { name: Familienrezept (handschriftliche Notiz), url: null }

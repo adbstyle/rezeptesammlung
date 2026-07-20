@@ -1,0 +1,58 @@
+id: orientalischer-dattelfladen
+title: Orientalischer Dattelfladen
+description: >
+  Knuspriger Fladen auf Pizzateig mit Crème fraîche, Sambal Oelek,
+  Bundzwiebeln, Datteln, Ziegenkäse und Thymian — in 40 Minuten auf dem
+  Tisch, lauwarm serviert.
+lang: de
+author: Coop
+date_published: 2026-07-20   # Rezeptkarte ohne Datum — Erfassungsdatum
+images: [images/orientalischer-dattelfladen.jpg]
+image_credit:
+  name: Maria kocht
+  url: https://4.bp.blogspot.com/-AQ2jrVKbta0/Wm2jOL_g2QI/AAAAAAAAAVU/6VMt0pmbfYgBFpi3r5xZDJiAkE51AXW6wCLcBGAs/s1600/Flammkuchen%2Bmit%2BZiegenkase%2Bund%2BDatteln1.jpg
+category: Hauptgericht
+cuisine: orientalisch
+keywords: [datteln, ziegenkäse, pizzateig, fladen, thymian, vegi]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 20, cook: 20 }
+yield:
+  servings: 4
+  description: 1 Blech (ca. 25 × 38 cm)
+
+nutrition:
+  calories: 646
+
+steps:
+  - text: >
+      {teig} mit dem Backpapier auf ein Blech legen. {creme_fraiche} und
+      {sambal} verrühren, mit {salz} salzen. Teig damit bestreichen.
+    ingredients:
+      - { id: teig, amount: 1, item: ausgewallter Pizzateig, note: "ca. 25 × 38 cm" }
+      - { id: creme_fraiche, amount: 100, unit: g, item: Crème fraîche }
+      - { id: sambal, amount: 0.25, unit: TL, item: Sambal Oelek }
+      - { id: salz, amount: 0.25, unit: TL, item: Salz, scalable: false }
+
+  - text: >
+      {bundzwiebeln} in Ringe, {datteln} längs in Viertel und
+      {ziegenkaese} in grobe Stücke schneiden. Alles auf dem Teig
+      verteilen, mit {pfeffer} würzen, {thymian} darüberstreuen.
+    ingredients:
+      - { id: bundzwiebeln, amount: 2, item: Bundzwiebeln, note: mit dem Grün }
+      - { id: datteln, amount: 100, unit: g, item: entsteinte Datteln }
+      - { id: ziegenkaese, amount: 150, unit: g, item: Ziegenkäse, note: z. B. Chavroux }
+      - { id: pfeffer, item: Pfeffer }
+      - { id: thymian, amount: 2, unit: TL, item: Thymianblättchen }
+
+  - text: >
+      Backen: ca. 20 Minuten in der unteren Hälfte des auf 220 °C
+      vorgeheizten Ofens. Lauwarm servieren.
+
+equipment: [Backblech, Backpapier]
+source:
+  name: Coop (Rezeptkarte «Vegi», April-Rezept)
+  url: https://www.coop.ch/rezepte
+notes: >
+  Die Datteln lassen sich durch getrocknete Feigen ersetzen. Dazu passt
+  Blattsalat.

@@ -1,0 +1,63 @@
+id: rueebli-muffins
+title: Rüebli-Muffins
+description: >
+  Saftige kleine Rüeblikuchen mit gemahlenen Mandeln und Zitrone, glasiert
+  mit Puderzucker-Zitronen-Guss und verziert mit Marzipanrüebli — in
+  45 Minuten auf dem Tisch.
+lang: de
+author: Coop
+date_published: 2026-07-20   # Rezeptkarte ohne Datum — Erfassungsdatum
+images: [images/rueebli-muffins.jpg]
+category: Dessert
+dish_type: Gebäck
+cuisine: Schweiz
+occasions: [ostern, familie]
+keywords: [rüebli, muffins, mandeln, marzipan, zitrone]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 20, cook: 25 }
+yield:
+  servings: 6
+  description: 6 Stück
+
+nutrition:
+  calories: 272
+
+steps:
+  - text: >
+      {butter} weich rühren. {zucker}, {salz}, {zitronenschale} und {ei}
+      darunterrühren, bis die Masse heller ist. {milch} darunterrühren.
+      {rueebli} an der Bircherraffel dazureiben, mischen. {mandeln},
+      {mehl} und {backpulver} daruntermischen.
+    ingredients:
+      - { id: butter, amount: 25, unit: g, item: Butter }
+      - { id: zucker, amount: 60, unit: g, item: Zucker }
+      - { id: salz, amount: 1, unit: Prise, item: Salz, scalable: false }
+      - { id: zitronenschale, amount: 1, item: Bio-Zitrone, note: wenig abgeriebene Schale }
+      - { id: ei, amount: 1, item: Ei, note: verklopft }
+      - { id: milch, amount: 0.5, unit: dl, item: Milch }
+      - { id: rueebli, amount: 100, unit: g, item: Rüebli }
+      - { id: mandeln, amount: 75, unit: g, item: gemahlene Mandeln, note: geschält }
+      - { id: mehl, amount: 50, unit: g, item: Mehl }
+      - { id: backpulver, amount: 2, unit: TL, item: Backpulver }
+
+  - text: >
+      Teig in 6 mit Papierförmchen ausgelegte Vertiefungen des
+      Muffinblechs geben, Blech auf Gitter stellen. Backen: ca.
+      25 Minuten in der Mitte des auf 180 Grad vorgeheizten Ofens.
+      Herausnehmen, auf einem Gitter auskühlen.
+
+  - text: >
+      Für die Glasur {puderzucker} und {zitronensaft} verrühren. Auf den
+      Muffins verteilen, mit Messer oder Spachtel glatt streichen. Mit
+      den {marzipanrueebli} verzieren, solange die Glasur noch feucht
+      ist, trocknen lassen.
+    ingredients:
+      - { id: puderzucker, amount: 60, unit: g, item: Puderzucker }
+      - { id: zitronensaft, amount: 1, unit: EL, item: Zitronensaft, note: ca. }
+      - { id: marzipanrueebli, amount: 6, item: Marzipanrüebli, note: ca. 50 g }
+
+equipment: [Muffinblech, Papierförmchen, Bircherraffel, Kuchengitter]
+source:
+  name: Coop (Rezeptkarte «Dessert», Rezept Februar)
+  url: https://www.coop.ch/rezepte

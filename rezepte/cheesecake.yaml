@@ -1,0 +1,64 @@
+id: cheesecake
+title: Cheesecake
+description: >
+  Gebackener Cheesecake nach handschriftlichem Familienrezept: Boden aus
+  zerdrückten Butterkeksen, darauf gezuckerte Heidel- oder Himbeeren und
+  eine Frischkäse-Quark-Masse mit Zitronenschale — nach dem Backen kühlt
+  der Kuchen langsam im Ofen aus.
+lang: de
+author: Familienrezept
+date_published: 2026-07-20   # handschriftliche Notiz ohne Datum — Erfassungsdatum
+images: [images/cheesecake.jpg]
+image_credit:
+  name: Nicoles Zuckerwerk
+  url: https://nicoleszuckerwerk.de/heidelbeer-kaesekuchen/
+category: Dessert
+dish_type: Kuchen & Torten
+keywords: [cheesecake, frischkäse, quark, heidelbeeren, himbeeren, butterkekse]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 25, cook: 60, rest: 120 }   # rest = Auskühlen im Ofen
+yield:
+  servings: 12
+  description: 1 Kuchen (Springform ca. 24 cm)
+
+steps:
+  - section: Boden
+    text: >
+      Ofen auf 180 °C vorheizen. {kekse} in einem Beutel zerdrücken.
+      {butter} schmelzen, Keks-Krümel beigeben und gut mischen. Mischung
+      in die Springform geben und gut andrücken.
+    ingredients:
+      - { id: kekse, amount: 150, unit: g, item: Butterkekse, note: z. B. Petit-Beurre }
+      - { id: butter, amount: 60, unit: g, item: Butter }
+
+  - section: Beeren
+    text: >
+      {beeren} mit {zucker_beeren} mischen und auf dem Boden verteilen.
+      Zugedeckt kühl stellen bis zur Weiterverwendung.
+    ingredients:
+      - { id: beeren, amount: 250, unit: g, item: Heidelbeeren oder Himbeeren }
+      - { id: zucker_beeren, amount: 1, unit: EL, item: Zucker }
+
+  - section: Masse
+    text: >
+      Für die Masse {frischkaese} mit {quark}, {creme_fraiche}, {eier},
+      {zucker_masse} und {mehl} gut vermischen, die Schale der {zitrone}
+      dazureiben und mischen. Die Masse auf dem Kuchenboden verteilen.
+      In der unteren Hälfte des Ofens ca. 1 Stunde backen.
+    ingredients:
+      - { id: frischkaese, amount: 200, unit: g, item: Frischkäse, note: z. B. Philadelphia }
+      - { id: quark, amount: 250, unit: g, item: Halbfettquark }
+      - { id: creme_fraiche, amount: 100, unit: g, item: Crème fraîche }
+      - { id: eier, amount: 3, item: Eier }
+      - { id: zucker_masse, amount: 80, unit: g, item: Zucker }
+      - { id: mehl, amount: 2, unit: EL, item: Mehl }
+      - { id: zitrone, amount: 1, item: Zitrone, note: abgeriebene Schale }
+
+  - section: Masse
+    text: >
+      Im ausgeschalteten Ofen bei leicht geöffneter Ofentür ca. 2 Stunden
+      abkühlen lassen.
+
+equipment: [Springform, Gefrierbeutel]
+source: { name: Familienrezept (handschriftliche Notiz), url: null }

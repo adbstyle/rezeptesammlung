@@ -280,12 +280,15 @@ main {
   position: fixed;
   inset: 0;
   background: rgba(30, 28, 22, 0.55);
-  display: flex;
   align-items: flex-start;
   justify-content: center;
   padding: 3vh 1rem;
   overflow-y: auto;
   z-index: 10;
+}
+
+.overlay:not([hidden]) {
+  display: flex;
 }
 
 .card-detail {

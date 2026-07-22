@@ -44,15 +44,21 @@ Die Sammlung ist als Website auf GitHub Pages veröffentlicht:
 **<https://adbstyle.github.io/rezeptesammlung/>**
 
 Die Seite ist eine statische Single-Page-App ohne Build-Schritt
-([index.html](index.html), [app.js](app.js), [style.css](style.css)): Sie
-liest die Rezept-YAMLs bei jedem Aufruf **live vom `main`-Branch** über die
-GitHub-API und rendert sie im Browser — inklusive Volltextsuche, Filter-Chips
-(Gang, Ernährung) und Detailansicht mit generierter Zutatenliste. Es wird
-nichts dupliziert: Ein gepushtes Rezept ist sofort online.
+([index.html](index.html), [app.js](app.js), [style.css](style.css)):
+Die Rezeptliste kommt live von der GitHub-API (das Verzeichnis
+`rezepte/` auf `main` ist die einzige Quelle der Wahrheit), die YAMLs und
+Bilder lädt die Seite **parallel von der eigenen Pages-Origin** — CDN-
+gecacht statt über raw.githubusercontent. Gerendert wird im Browser,
+inklusive Volltextsuche, Filter-Chips (Gang, Ernährung) und Detailansicht
+mit generierter Zutatenliste. Wiederbesuche rendern sofort aus einem
+localStorage-Schnappschuss; frische Daten laden im Hintergrund nach. Ein
+gepushtes Rezept ist nach dem Pages-Build online, nichts wird dupliziert.
 
-Quell-Repo und Branch sind in [config.js](config.js) konfiguriert. GitHub
-Pages ist auf «Deploy from a branch» mit `main` / root eingestellt; ein
-eigener Deploy-Branch oder Workflow ist nicht nötig.
+Läuft die Seite nicht auf Pages (z. B. lokal geöffnet), fällt sie auf
+raw.githubusercontent zurück. Quell-Repo und Branch sind in
+[config.js](config.js) konfiguriert. GitHub Pages ist auf «Deploy from a
+branch» mit `main` / root eingestellt; ein eigener Deploy-Branch oder
+Workflow ist nicht nötig.
 
 ## Rezeptformat
 

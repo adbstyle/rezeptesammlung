@@ -4,6 +4,14 @@
   const CFG = window.REZEPTE_CONFIG;
   const API_LIST = `https://api.github.com/repos/${CFG.owner}/${CFG.repo}/contents/${CFG.path}?ref=${CFG.branch}`;
   const RAW_BASE = `https://raw.githubusercontent.com/${CFG.owner}/${CFG.repo}/${CFG.branch}`;
+  const REMOTE_BASE = `${RAW_BASE}/${CFG.path}`;
+  const CACHE_KEY = "rezeptkasten.cache.v1";
+
+  // GitHub Pages served den main-Branch mit: liegen die YAMLs auf derselben
+  // Origin wie die Seite, werden Rezepte und Bilder relativ geladen —
+  // CDN-gecacht statt über raw.githubusercontent. Sonst bleibt raw die Quelle.
+  const baseFor = (mode) => (mode === "local" ? CFG.path : REMOTE_BASE);
+  let assetBase = REMOTE_BASE;
 
   const els = {
     grid: document.getElementById("grid"),
@@ -46,6 +54,14 @@
     return res.text();
   }
 
+  // Rezeptdaten sind freier Text und werden per innerHTML gerendert — daher
+  // im HTML-Kontext maskieren (Ausgabe-Encoding). Schützt zugleich vor
+  // kaputtem Rendering bei legitimen Zeichen wie & < > " in Titel/Zutat.
+  const ESCAPE = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+  function esc(value) {
+    return String(value == null ? "" : value).replace(/[&<>"']/g, (c) => ESCAPE[c]);
+  }
+
   // Merge ingredients across steps: same id must share item/unit, amounts sum.
   function collectIngredients(steps) {
     const byId = new Map();
@@ -71,18 +87,19 @@
   }
 
   function renderStepText(text, ingredients) {
-    return (text || "").replace(/\{(\w[\w-]*)\}/g, (m, id) => {
+    const raw = (text || "").replace(/\{(\w[\w-]*)\}/g, (m, id) => {
       const ing = ingredients.find((i) => i.id === id);
       if (!ing) return m;
       const amt = formatAmount(ing);
       return amt ? `${amt} ${ing.item}` : ing.item;
     });
+    return esc(raw); // Ergebnis geht direkt in innerHTML
   }
 
   function imageUrl(recipe) {
     const img = (recipe.images || [])[0];
     if (!img) return null;
-    return `${RAW_BASE}/${CFG.path}/${img}`;
+    return `${assetBase}/${img}`;
   }
 
   function timeLabel(recipe) {
@@ -130,20 +147,20 @@
     const diet = (recipe.diet || []).map(dietLabel);
     const tt = totalTime(recipe);
     return `
-      <article class="rcard" data-id="${recipe.id}" tabindex="0">
+      <article class="rcard" data-id="${esc(recipe.id)}" tabindex="0">
         <div class="rcard__media" ${img ? "" : 'data-empty="1"'}>
-          ${img ? `<img src="${img}" alt="" loading="lazy" onerror="this.parentElement.dataset.empty='1'; this.remove();">` : ""}
-          ${recipe.category ? `<span class="rcard__pin">${recipe.category}</span>` : ""}
+          ${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : ""}
+          ${recipe.category ? `<span class="rcard__pin">${esc(recipe.category)}</span>` : ""}
         </div>
         <div class="rcard__body">
-          <h3 class="rcard__title">${recipe.title}</h3>
-          ${recipe.description ? `<p class="rcard__desc">${recipe.description}</p>` : ""}
+          <h3 class="rcard__title">${esc(recipe.title)}</h3>
+          ${recipe.description ? `<p class="rcard__desc">${esc(recipe.description)}</p>` : ""}
           <div class="rcard__meta">
             ${tt ? `<span>${tt} Min.</span>` : ""}
-            ${recipe.difficulty ? `<span>${recipe.difficulty}</span>` : ""}
-            ${recipe.yield && recipe.yield.servings ? `<span>${recipe.yield.servings} Port.</span>` : ""}
+            ${recipe.difficulty ? `<span>${esc(recipe.difficulty)}</span>` : ""}
+            ${recipe.yield && recipe.yield.servings ? `<span>${esc(recipe.yield.servings)} Port.</span>` : ""}
           </div>
-          ${diet.length ? `<div class="rcard__tags">${diet.map((d) => `<span class="tag">${d}</span>`).join("")}</div>` : ""}
+          ${diet.length ? `<div class="rcard__tags">${diet.map((d) => `<span class="tag">${esc(d)}</span>`).join("")}</div>` : ""}
         </div>
       </article>`;
   }
@@ -152,15 +169,15 @@
     const ingredients = collectIngredients(recipe.steps);
     const img = imageUrl(recipe);
     return `
-      ${img ? `<div class="detail__media"><img src="${img}" alt=""></div>` : ""}
+      ${img ? `<div class="detail__media"><img src="${esc(img)}" alt=""></div>` : ""}
       <div class="detail__head">
-        <span class="detail__eyebrow">${[recipe.category, recipe.cuisine].filter(Boolean).join(" · ")}</span>
-        <h2>${recipe.title}</h2>
-        ${recipe.description ? `<p class="detail__desc">${recipe.description}</p>` : ""}
+        <span class="detail__eyebrow">${[recipe.category, recipe.cuisine].filter(Boolean).map(esc).join(" · ")}</span>
+        <h2>${esc(recipe.title)}</h2>
+        ${recipe.description ? `<p class="detail__desc">${esc(recipe.description)}</p>` : ""}
         <div class="detail__meta">
-          ${timeLabel(recipe) ? `<span>${timeLabel(recipe)}</span>` : ""}
-          ${recipe.difficulty ? `<span>Schwierigkeit: ${recipe.difficulty}</span>` : ""}
-          ${recipe.yield && recipe.yield.servings ? `<span>${recipe.yield.servings} Portionen</span>` : ""}
+          ${timeLabel(recipe) ? `<span>${esc(timeLabel(recipe))}</span>` : ""}
+          ${recipe.difficulty ? `<span>Schwierigkeit: ${esc(recipe.difficulty)}</span>` : ""}
+          ${recipe.yield && recipe.yield.servings ? `<span>${esc(recipe.yield.servings)} Portionen</span>` : ""}
         </div>
       </div>
       <div class="detail__grid">
@@ -168,7 +185,7 @@
           <h3>Zutaten</h3>
           <ul>
             ${ingredients
-              .map((i) => `<li><span class="amt">${formatAmount(i) || "n. Belieben"}</span> ${i.item}${i.note ? ` <em>(${i.note})</em>` : ""}</li>`)
+              .map((i) => `<li><span class="amt">${esc(formatAmount(i) || "n. Belieben")}</span> ${esc(i.item)}${i.note ? ` <em>(${esc(i.note)})</em>` : ""}</li>`)
               .join("")}
           </ul>
         </div>
@@ -176,7 +193,7 @@
           <h3>Zubereitung</h3>
           <ol>
             ${(recipe.steps || [])
-              .map((s) => `<li>${renderStepText(s.text, ingredients)}</li>`)
+              .map((s) => `<li>${renderStepText(s.text, s.ingredients || [])}</li>`)
               .join("")}
           </ol>
         </div>
@@ -211,7 +228,7 @@
     els.chips.innerHTML = chips
       .map(
         (c) =>
-          `<button class="chip" data-type="${c.type}" data-value="${c.value}">${c.label}</button>`
+          `<button class="chip" data-type="${c.type}" data-value="${esc(c.value)}">${esc(c.label)}</button>`
       )
       .join("");
   }
@@ -249,6 +266,16 @@
       applyFilters();
     });
 
+    // Bild-Fallback ohne inline onerror (CSP-freundlich): error-Events
+    // bubbeln nicht, werden aber in der Capture-Phase am grid sichtbar.
+    els.grid.addEventListener("error", (e) => {
+      const img = e.target;
+      if (img.tagName !== "IMG") return;
+      const media = img.closest(".rcard__media");
+      if (media) media.dataset.empty = "1";
+      img.remove();
+    }, true);
+
     els.grid.addEventListener("click", (e) => {
       const card = e.target.closest(".rcard");
       if (card) openDetail(card.dataset.id);
@@ -268,42 +295,90 @@
     });
   }
 
-  async function loadRecipes() {
-    setStatus("Rezeptliste wird von main geladen …");
-    const files = await fetchJSON(API_LIST);
-    const yamlFiles = files.filter((f) => f.type === "file" && /\.ya?ml$/i.test(f.name));
+  function readCache() {
+    try {
+      const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+      if (cached && Array.isArray(cached.recipes) && cached.recipes.length) return cached;
+    } catch (_) { /* kein/kaputter Cache — egal */ }
+    return null;
+  }
 
-    setStatus(`0 / ${yamlFiles.length} Rezepte geladen …`);
-    const results = [];
-    let done = 0;
-    for (const file of yamlFiles) {
-      try {
-        const text = await fetchText(`${RAW_BASE}/${CFG.path}/${file.name}`);
-        const data = jsyaml.load(text);
-        if (data && data.id) {
-          data._search = buildSearchIndex(data);
-          results.push(data);
-        }
-      } catch (err) {
-        console.warn("Rezept konnte nicht geladen werden:", file.name, err);
-      }
-      done += 1;
-      setStatus(`${done} / ${yamlFiles.length} Rezepte geladen …`);
-    }
+  function writeCache(mode, recipes) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ mode, recipes }));
+    } catch (_) { /* Storage voll/gesperrt — egal, reine Optimierung */ }
+  }
 
-    results.sort((a, b) => a.title.localeCompare(b.title, "de"));
-    allRecipes = results;
-    setStatus("");
+  function showRecipes(recipes) {
+    allRecipes = recipes;
     buildChips();
     applyFilters();
   }
 
+  async function detectMode(ids) {
+    // Same-Origin-Probe: das erste YAML relativ laden; die Antwort bleibt
+    // im HTTP-Cache, der Versuch kostet also praktisch nichts.
+    try {
+      await fetchText(`${CFG.path}/${ids[0]}.yaml`);
+      return "local";
+    } catch (_) {
+      return "remote";
+    }
+  }
+
+  async function loadRecipes(quiet) {
+    // Das Verzeichnis auf main ist die einzige Quelle der Wahrheit dafür,
+    // welche Rezepte existieren — die Liste kommt darum von der GitHub-API.
+    if (!quiet) setStatus("Rezeptliste wird von main geladen …");
+    const files = await fetchJSON(API_LIST);
+    const ids = files
+      .filter((f) => f.type === "file" && /\.ya?ml$/i.test(f.name))
+      .map((f) => f.name.replace(/\.ya?ml$/i, ""));
+    const mode = await detectMode(ids);
+    assetBase = baseFor(mode);
+
+    // Alle Rezepte parallel laden (HTTP/2 bündelt das auf eine Verbindung)
+    let done = 0;
+    if (!quiet) setStatus(`0 / ${ids.length} Rezepte geladen …`);
+    const results = (await Promise.all(ids.map(async (id) => {
+      try {
+        const text = await fetchText(`${assetBase}/${id}.yaml`);
+        const data = jsyaml.load(text);
+        if (data && data.id) {
+          data._search = buildSearchIndex(data);
+          return data;
+        }
+      } catch (err) {
+        console.warn("Rezept konnte nicht geladen werden:", id, err);
+      } finally {
+        done += 1;
+        if (!quiet) setStatus(`${done} / ${ids.length} Rezepte geladen …`);
+      }
+      return null;
+    }))).filter(Boolean);
+
+    results.sort((a, b) => a.title.localeCompare(b.title, "de"));
+    setStatus("");
+    showRecipes(results);
+    writeCache(mode, results);
+  }
+
   wireEvents();
-  loadRecipes().catch((err) => {
+
+  // Wiederbesuch: sofort aus dem localStorage-Schnappschuss rendern,
+  // frische Daten kommen im Hintergrund nach.
+  const cached = readCache();
+  if (cached) {
+    assetBase = baseFor(cached.mode);
+    showRecipes(cached.recipes);
+  }
+  loadRecipes(!!cached).catch((err) => {
     console.error(err);
-    setStatus(
-      "Rezepte konnten nicht geladen werden — evtl. GitHub-API-Limit erreicht. Später erneut versuchen.",
-      true
-    );
+    if (!cached) {
+      setStatus(
+        "Rezepte konnten nicht geladen werden — evtl. GitHub-API-Limit erreicht. Später erneut versuchen.",
+        true
+      );
+    }
   });
 })();

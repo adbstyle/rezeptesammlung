@@ -1,11 +1,13 @@
 # Rezeptesammlung
 
-Persönliche Rezeptsammlung als strukturierte YAML-Dateien mit Validierung und
-PDF-Build. Jedes Rezept ist eine Datei in [rezepte/](rezepte/), die Zutaten
-werden direkt in den Zubereitungsschritten deklariert — die Zutatenliste wird
-daraus automatisch generiert. Das Datenmodell ist in der
+Persönliche Rezeptsammlung als strukturierte YAML-Dateien mit Validierung,
+PDF-Build und Website. Jedes Rezept ist eine Datei in [rezepte/](rezepte/),
+die Zutaten werden direkt in den Zubereitungsschritten deklariert — die
+Zutatenliste wird daraus automatisch generiert. Das Datenmodell ist in der
 [Spezifikation](docs/spezifikation.md) beschrieben (gültige, massgebliche
 Fassung).
+
+**Website:** <https://adbstyle.github.io/rezeptesammlung/>
 
 ## Setup
 
@@ -35,6 +37,22 @@ Für den PDF-Build werden zusätzlich **Pandoc** (Markdown → HTML) und ein
 # Skalierte Sonderausgabe (z. B. für 8 Personen)
 .venv/bin/python scripts/build_pdf.py --servings 8 rezepte/goldenes-dal.yaml
 ```
+
+## Website («Rezeptkasten»)
+
+Die Sammlung ist als Website auf GitHub Pages veröffentlicht:
+**<https://adbstyle.github.io/rezeptesammlung/>**
+
+Die Seite ist eine statische Single-Page-App ohne Build-Schritt
+([index.html](index.html), [app.js](app.js), [style.css](style.css)): Sie
+liest die Rezept-YAMLs bei jedem Aufruf **live vom `main`-Branch** über die
+GitHub-API und rendert sie im Browser — inklusive Volltextsuche, Filter-Chips
+(Gang, Ernährung) und Detailansicht mit generierter Zutatenliste. Es wird
+nichts dupliziert: Ein gepushtes Rezept ist sofort online.
+
+Quell-Repo und Branch sind in [config.js](config.js) konfiguriert. GitHub
+Pages ist auf «Deploy from a branch» mit `main` / root eingestellt; ein
+eigener Deploy-Branch oder Workflow ist nicht nötig.
 
 ## Rezeptformat
 
@@ -96,5 +114,9 @@ schema/             JSON Schema (recipe.schema.json) + Einheiten (units.yaml)
 scripts/            validate.py, build_pdf.py
 scripts/lib/        Gemeinsame Lade-, Skalierungs- und Renderlogik
 docs/               spezifikation.md — massgebliche Spezifikation
+index.html          Website «Rezeptkasten» (GitHub Pages, liest live von main)
+app.js              Laden, Suche, Filter und Rendering der Website
+config.js           Quell-Repo/Branch der Website
+style.css           Stylesheet der Website
 build/              Generierte PDFs (nicht eingecheckt)
 ```

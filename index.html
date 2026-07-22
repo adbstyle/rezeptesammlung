@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rezeptkasten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="box-header">
+  <div class="box-header__inner">
+    <div class="box-header__title">
+      <span class="box-header__eyebrow">Digitaler Rezeptkasten</span>
+      <h1>Rezeptesammlung</h1>
+    </div>
+    <p class="box-header__sub" id="recipeCount">Rezepte werden geladen …</p>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar">
+    <div class="search-slot">
+      <input type="search" id="searchInput" placeholder="Suchen: Titel, Zutat, Küche …" autocomplete="off">
+      <span class="search-slot__label">Suchkarte</span>
+    </div>
+    <div class="filters" id="filterChips" aria-label="Filter"></div>
+  </div>
+
+  <p id="statusLine" class="status-line" hidden></p>
+
+  <section id="grid" class="grid" aria-live="polite"></section>
+
+  <p id="emptyState" class="empty-state" hidden>Keine Rezepte gefunden — Karteikasten leer geblättert. Versuch einen anderen Suchbegriff.</p>
+</main>
+
+<div id="overlay" class="overlay" hidden>
+  <div class="card-detail" role="dialog" aria-modal="true">
+    <button class="card-detail__close" id="closeDetail" aria-label="Schliessen">×</button>
+    <div id="detailContent"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  Daten live von <a id="repoLink" href="#" target="_blank" rel="noopener">GitHub</a> · Branch <code id="branchLabel"></code>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

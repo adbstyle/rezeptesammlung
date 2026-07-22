@@ -124,5 +124,6 @@ index.html          Website «Rezeptkasten» (GitHub Pages, liest live von main)
 app.js              Laden, Suche, Filter und Rendering der Website
 config.js           Quell-Repo/Branch der Website
 style.css           Stylesheet der Website
+vendor/             Eingebundene Fremd-Libs der Website (js-yaml)
 build/              Generierte PDFs (nicht eingecheckt)
 ```

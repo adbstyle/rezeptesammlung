@@ -193,6 +193,10 @@ main {
 }
 
 .rcard__media img {
+  /* absolut positioniert, damit hochformatige Bilder die 4:3-Box nicht
+     aufblähen (Chromium lässt in-flow-Inhalt über aspect-ratio wachsen) */
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

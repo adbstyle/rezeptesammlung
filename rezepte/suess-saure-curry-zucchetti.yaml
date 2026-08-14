@@ -1,0 +1,90 @@
+id: suess-saure-curry-zucchetti
+title: Süss-saure Curry-Zucchetti
+description: >
+  Eingemachte Zucchetti im süss-sauren Curry-Essig-Sud — die 4-Tage-Methode:
+  jeden Tag ein paar Minuten Arbeit, dafür bleiben die Stücke bissfest und der
+  Sud wird würzig. Gut gekühlt und sauber gearbeitet ein Vorrat für den ganzen
+  Winter.
+lang: de
+author: Marlenes sweet things
+date_published: 2026-08-14   # Erfassungsdatum (Onlinerezept ohne Datum)
+images: [images/suess-saure-curry-zucchetti.jpg]
+image_credit:
+  name: Jason Riedy
+  license: CC BY 2.0
+  url: https://www.flickr.com/photos/66142667@N00/2610455008
+category: Beilage
+cuisine: Schweiz
+keywords: [einmachen, eingemachtes, zucchetti, curry, süss-sauer, vorrat, resteverwertung]
+season: [sommer, herbst]
+diet: [vegan, vegetarian, gluten_free, lactose_free]
+difficulty: einfach
+times: { prep: 50, cook: 15, rest: 4320 }   # rest = 3 Nächte zwischen Tag 1 und Tag 4
+yield:
+  servings: 6
+  description: 6 Einmachgläser à 400 ml
+
+steps:
+  - section: Tag 1 — Salzen
+    text: >
+      {zucchetti} entkernen und in ca. 2 x 2 cm grosse Stücke schneiden.
+      {zwiebeln} halbieren und in feine Streifen schneiden, {peperoni}
+      ebenfalls in feine Streifen schneiden. Alles mit {salz} in einer
+      grossen Schüssel gut vermischen und zugedeckt bei Raumtemperatur
+      stehen lassen.
+    ingredients:
+      - { id: zucchetti, amount: 1300, unit: g, item: Zucchetti, note: entkernt gewogen }
+      - { id: zwiebeln, amount: 200, unit: g, item: Zwiebeln }
+      - { id: peperoni, amount: 0.5, item: rote Peperoni }
+      - { id: salz, amount: 70, unit: g, item: Salz }
+
+  - section: Tag 2 — Curry-Essig-Sud
+    text: >
+      Die Zucchetti-Mischung durch ein Sieb geben, mit kaltem Wasser gut
+      abspülen und etwas abtropfen lassen. {essig}, {wasser}, {zucker},
+      {curry} und {pfefferkoerner} aufkochen. Die Zucchetti zurück in die
+      Schüssel geben, den kochenden Curry-Essig-Sud darübergeben und
+      zugedeckt über Nacht im Kühlschrank stehen lassen.
+    ingredients:
+      - { id: essig, amount: 500, unit: ml, item: Kräuteressig }
+      - { id: wasser, amount: 500, unit: ml, item: Wasser }
+      - { id: zucker, amount: 200, unit: g, item: Zucker }
+      - { id: curry, amount: 4, unit: TL, item: Currypulver, note: mild }
+      - { id: pfefferkoerner, amount: 1, unit: TL, item: schwarze Pfefferkörner }
+
+  - section: Tag 3 — Sud aufkochen
+    text: >
+      Die Zucchetti durch ein Sieb abgiessen, den Sud in einem Topf
+      auffangen und kurz aufkochen. Die Zucchetti zurück in die Schüssel
+      geben, den Sud erneut darübergiessen und eine weitere Nacht zugedeckt
+      im Kühlschrank stehen lassen.
+
+  - section: Tag 4 — Einmachen
+    text: >
+      Die Gläser sterilisieren: gewaschene Gläser im Ofen bei 150 °C
+      Ober-/Unterhitze 15 Minuten sterilisieren.
+
+  - section: Tag 4 — Einmachen
+    text: >
+      Zucchetti samt Sud in einen Topf geben und 5 Minuten kochen lassen.
+      Die festen Bestandteile in die Gläser verteilen, zum Schluss den Sud
+      darübergiessen und die Gläser verschliessen.
+
+  - section: Tag 4 — Einmachen
+    text: >
+      Twist-off-Gläser randvoll befüllen, sofort verschliessen und auskühlen
+      lassen. Weckgläser befüllen, mit 2 Klammern verschliessen und
+      30 Minuten bei 90 °C einkochen.
+
+equipment:
+  - 6 Einmachgläser à 400 ml (Twist-off oder Weck)
+  - grosse Schüssel
+  - Sieb
+  - Topf
+source:
+  name: Marlenes sweet things
+  url: https://marlenessweetthings.ch/suess-saure-curry-zucchetti/
+notes: >
+  Mindestens 14 Tage ziehen lassen — vorher schmecken sie flach. Sauber
+  gearbeitet halten sie sich rund 12 Monate. Zucchetti unbedingt entkernen,
+  sonst werden die Stücke weich.

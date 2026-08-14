@@ -54,6 +54,16 @@ mit generierter Zutatenliste. Wiederbesuche rendern sofort aus einem
 localStorage-Schnappschuss; frische Daten laden im Hintergrund nach. Ein
 gepushtes Rezept ist nach dem Pages-Build online, nichts wird dupliziert.
 
+Jedes Rezept hat eine eigene, teilbare Adresse: `…/#/<rezept-id>`, zum
+Beispiel <https://adbstyle.github.io/rezeptesammlung/#/goldenes-dal>. Wer
+so einen Link öffnet, landet direkt in der Detailansicht; die Adresszeile
+zieht auch beim Blättern durch die Sammlung mit, und der Browser-Zurück-
+Button schliesst die Detailansicht zur Übersicht. Zeigt ein Link auf ein
+Rezept, das es nicht (mehr) gibt, erscheint ein Hinweis über der normalen
+Übersicht — ein Ladefehler (kein Netz, API-Limit) wird davon unterschieden
+und lässt den Link gültig. Umbenennen einer `id` bricht alte Links, es gibt
+keine Weiterleitung.
+
 Läuft die Seite nicht auf Pages (z. B. lokal geöffnet), fällt sie auf
 raw.githubusercontent zurück. Quell-Repo und Branch sind in
 [config.js](config.js) konfiguriert. GitHub Pages ist auf «Deploy from a

@@ -23,6 +23,7 @@
     overlay: document.getElementById("overlay"),
     detail: document.getElementById("detailContent"),
     close: document.getElementById("closeDetail"),
+    notice: document.getElementById("deepLinkNotice"),
     repoLink: document.getElementById("repoLink"),
     branchLabel: document.getElementById("branchLabel"),
   };
@@ -34,10 +35,56 @@
   let activeCategory = null;
   let activeDiet = null;
 
+  // Deep-Links: der Hash ist die einzige Quelle der Wahrheit dafür, welches
+  // Rezept offen ist. Die UI ändert nur den Hash, handleRoute() zieht daraus
+  // den Overlay-Zustand nach — so bleiben Adresszeile, History und Ansicht
+  // zwangsläufig synchron.
+  const SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/; // = id-Pattern aus recipe.schema.json
+  const BASE_TITLE = document.title;
+  let currentDetailId = null; // offenes Rezept, null = Overlay zu
+  let currentDetailJson = null; // Vergleichsstand, um Re-Render nur bei Änderung zu machen
+  let pendingId = null; // adressiertes Rezept, das noch nicht geladen ist
+  let needsBaseEntry = false; // Direkteinstieg per Link: Basis-Eintrag fehlt noch in der History
+  let listIsFresh = false; // die Liste wurde in dieser Sitzung erfolgreich frisch geladen
+
   function setStatus(msg, isError) {
     els.status.hidden = !msg;
     els.status.textContent = msg || "";
     els.status.classList.toggle("status-line--error", !!isError);
+  }
+
+  // Eigene Zeile für Deep-Link-Meldungen: die Statuszeile wird vom Laden
+  // laufend überschrieben und am Ende geleert, ein Hinweis dort wäre weg.
+  function setNotice(msg, isError) {
+    els.notice.hidden = !msg;
+    els.notice.textContent = msg || "";
+    els.notice.classList.toggle("status-line--error", !!isError);
+  }
+
+  // Rohwert hinter "#/" — leer heisst: keine Rezept-URL. decodeURIComponent
+  // wirft bei kaputten Sequenzen wie "%", darum abgesichert.
+  function hashRaw() {
+    const raw = location.hash.replace(/^#\/?/, "").trim();
+    try {
+      return decodeURIComponent(raw);
+    } catch (_) {
+      return raw;
+    }
+  }
+
+  // Liefert die adressierte Rezept-id oder null. Ein Wert, der nicht dem
+  // id-Pattern entspricht, kann kein Rezept sein und gilt als nicht adressiert.
+  function parseHash() {
+    const raw = hashRaw();
+    return SLUG_RE.test(raw) ? raw : null;
+  }
+
+  const basePath = () => location.pathname + location.search;
+
+  // Vergleichsstand ohne den abgeleiteten Suchindex — der ändert sich mit dem
+  // Inhalt und würde sonst jeden Vergleich unnötig verrauschen.
+  function detailFingerprint(recipe) {
+    return JSON.stringify(recipe, (key, value) => (key === "_search" ? undefined : value));
   }
 
   async function fetchJSON(url) {
@@ -203,14 +250,114 @@
   function openDetail(id) {
     const recipe = allRecipes.find((r) => r.id === id);
     if (!recipe) return;
+
+    // Direkteinstieg per Link: die History enthält nur den Deep-Link selbst,
+    // "Zurück" würde die Seite verlassen. Darum den Deep-Link-Eintrag zur
+    // Basis-URL umschreiben und die Rezept-URL neu obendrauf legen — danach
+    // sieht die History aus wie beim Öffnen über die Übersicht.
+    if (needsBaseEntry) {
+      history.replaceState(null, "", basePath());
+      history.pushState(null, "", `#/${id}`);
+      needsBaseEntry = false;
+    }
+
     els.detail.innerHTML = detailTemplate(recipe);
     els.overlay.hidden = false;
     document.body.style.overflow = "hidden";
+    currentDetailId = id;
+    currentDetailJson = detailFingerprint(recipe);
+    document.title = `${recipe.title} – ${BASE_TITLE}`;
+    setNotice("");
   }
 
   function closeDetail() {
     els.overlay.hidden = true;
     document.body.style.overflow = "";
+    currentDetailId = null;
+    currentDetailJson = null;
+    document.title = BASE_TITLE;
+  }
+
+  // Schliessen geht immer über die History zurück, damit die Adresszeile
+  // mitkommt. closeDetail() direkt nur, wenn gar keine Rezept-URL aktiv ist.
+  function requestClose() {
+    if (parseHash()) history.back();
+    else closeDetail();
+  }
+
+  // Einziger Einstiegspunkt für Zustandswechsel. Idempotent: ein erneuter
+  // Aufruf mit derselben id rendert nicht doppelt.
+  function handleRoute() {
+    const id = parseHash();
+    if (id && id === currentDetailId) return;
+
+    if (!id) {
+      pendingId = null;
+      const raw = hashRaw();
+      if (!els.overlay.hidden) closeDetail();
+      // Ein Hash, der kein gültiger Rezept-Slug ist, kann nie ein Rezept
+      // treffen — das ist sofort ein toter Link, ohne auf Daten zu warten.
+      if (raw) notFound(raw);
+      return;
+    }
+
+    setNotice("");
+    if (allRecipes.some((r) => r.id === id)) {
+      pendingId = null;
+      openDetail(id);
+      return;
+    }
+
+    // Liegt die frische Liste schon vor, ist die Sache entschieden.
+    if (listIsFresh) {
+      notFound(id);
+      return;
+    }
+
+    // Sonst: merken und auf die frischen Daten warten. Ob das Rezept fehlt
+    // oder nur noch nicht da ist, lässt sich jetzt nicht sagen.
+    pendingId = id;
+    setStatus(`Rezept «${id}» wird geladen …`);
+  }
+
+  function notFound(id) {
+    pendingId = null;
+    needsBaseEntry = false;
+    if (!els.overlay.hidden) closeDetail();
+    history.replaceState(null, "", basePath());
+    setStatus("");
+    setNotice(`Das Rezept «${id}» gibt es hier nicht (mehr). Vielleicht wirst du unten in der Sammlung fündig.`);
+  }
+
+  // Läuft nach jedem erfolgreichen Laden: erst jetzt ist entscheidbar, ob ein
+  // adressiertes Rezept wirklich fehlt — ein alter Schnappschuss darf dieses
+  // Urteil nicht fällen.
+  function syncAfterFreshLoad(recipes) {
+    if (pendingId) {
+      const id = pendingId;
+      if (recipes.some((r) => r.id === id)) {
+        pendingId = null;
+        openDetail(id);
+      } else {
+        notFound(id);
+      }
+      return;
+    }
+
+    if (!currentDetailId) return;
+
+    // Das offene Rezept kam evtl. aus dem Schnappschuss: auf den frischen
+    // Stand nachziehen, aber nur bei echter Änderung (sonst springt der Scroll).
+    const fresh = recipes.find((r) => r.id === currentDetailId);
+    if (!fresh) {
+      notFound(currentDetailId);
+      return;
+    }
+    const fingerprint = detailFingerprint(fresh);
+    if (fingerprint !== currentDetailJson) {
+      els.detail.innerHTML = detailTemplate(fresh);
+      currentDetailJson = fingerprint;
+    }
   }
 
   function buildChips() {
@@ -276,23 +423,27 @@
       img.remove();
     }, true);
 
+    // Öffnen heisst navigieren: der Hash-Wechsel löst handleRoute() aus und
+    // erzeugt zugleich den History-Eintrag für den Zurück-Button.
     els.grid.addEventListener("click", (e) => {
       const card = e.target.closest(".rcard");
-      if (card) openDetail(card.dataset.id);
+      if (card) location.hash = `#/${card.dataset.id}`;
     });
     els.grid.addEventListener("keydown", (e) => {
       if (e.key !== "Enter") return;
       const card = e.target.closest(".rcard");
-      if (card) openDetail(card.dataset.id);
+      if (card) location.hash = `#/${card.dataset.id}`;
     });
 
-    els.close.addEventListener("click", closeDetail);
+    els.close.addEventListener("click", requestClose);
     els.overlay.addEventListener("click", (e) => {
-      if (e.target === els.overlay) closeDetail();
+      if (e.target === els.overlay) requestClose();
     });
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !els.overlay.hidden) closeDetail();
+      if (e.key === "Escape" && !els.overlay.hidden) requestClose();
     });
+
+    window.addEventListener("hashchange", handleRoute);
   }
 
   function readCache() {
@@ -361,9 +512,14 @@
     setStatus("");
     showRecipes(results);
     writeCache(mode, results);
+    listIsFresh = true;
+    syncAfterFreshLoad(results);
   }
 
   wireEvents();
+
+  // Direkteinstieg über eine Rezept-URL erkennen, bevor irgendetwas rendert.
+  if (parseHash()) needsBaseEntry = true;
 
   // Wiederbesuch: sofort aus dem localStorage-Schnappschuss rendern,
   // frische Daten kommen im Hintergrund nach.
@@ -372,8 +528,18 @@
     assetBase = baseFor(cached.mode);
     showRecipes(cached.recipes);
   }
+  handleRoute();
   loadRecipes(!!cached).catch((err) => {
     console.error(err);
+    if (pendingId) {
+      // Hash bewusst stehen lassen: ein Reload versucht den Link erneut. Ein
+      // Ladefehler ist kein Beweis, dass das Rezept fehlt.
+      setNotice(
+        "Das verlinkte Rezept konnte nicht geladen werden — keine Verbindung oder GitHub-API-Limit erreicht. Lade die Seite später neu, der Link bleibt gültig.",
+        true
+      );
+      setStatus("");
+    }
     if (!cached) {
       setStatus(
         "Rezepte konnten nicht geladen werden — evtl. GitHub-API-Limit erreicht. Später erneut versuchen.",

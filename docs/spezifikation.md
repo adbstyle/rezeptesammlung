@@ -204,7 +204,9 @@ Kernprinzips (Kap. 2): Ableitbares wird berechnet, damit es nie veraltet.
 ## 7. Validierungsregeln (`validate.py`, Build bricht bei Fehler ab)
 
 1. **Schema:** Jede Rezept-Datei validiert gegen `recipe.schema.json`.
-2. **Dateiname = `id`**, `id` ist repo-weit eindeutig.
+2. **Dateiname = `id`**, `id` ist repo-weit eindeutig. Die `id` ist zugleich
+   die öffentliche Adresse des Rezepts auf der Website (`…/#/<id>`) — eine
+   Umbenennung bricht bereits geteilte Links und Lesezeichen.
 3. **Referenz-Integrität pro Schritt:** Jede in `ingredients` deklarierte `id`
    kommt genau als `{id}` im `text` des Schritts vor, und jedes `{id}` im Text
    ist im selben Schritt deklariert.

@@ -46,6 +46,10 @@
   let pendingId = null; // adressiertes Rezept, das noch nicht geladen ist
   let needsBaseEntry = false; // Direkteinstieg per Link: Basis-Eintrag fehlt noch in der History
   let listIsFresh = false; // die Liste wurde in dieser Sitzung erfolgreich frisch geladen
+  let loadFailed = false; // das frische Laden ist gescheitert — es kommt nichts mehr nach
+
+  const LOAD_ERROR_MSG =
+    "Das verlinkte Rezept konnte nicht geladen werden — keine Verbindung oder GitHub-API-Limit erreicht. Lade die Seite später neu, der Link bleibt gültig.";
 
   function setStatus(msg, isError) {
     els.status.hidden = !msg;
@@ -80,6 +84,15 @@
   }
 
   const basePath = () => location.pathname + location.search;
+
+  // Bei direkt geöffneter Datei (file://, Origin "null") werfen replaceState/
+  // pushState eine SecurityError. Die URL-Pflege ist dort Komfort, kein Grund,
+  // den Ablauf abzubrechen — der Rest der Seite funktioniert weiter.
+  function rewriteHistory(method, url) {
+    try {
+      history[method](null, "", url);
+    } catch (_) { /* file:// — egal */ }
+  }
 
   // Vergleichsstand ohne den abgeleiteten Suchindex — der ändert sich mit dem
   // Inhalt und würde sonst jeden Vergleich unnötig verrauschen.
@@ -256,8 +269,8 @@
     // Basis-URL umschreiben und die Rezept-URL neu obendrauf legen — danach
     // sieht die History aus wie beim Öffnen über die Übersicht.
     if (needsBaseEntry) {
-      history.replaceState(null, "", basePath());
-      history.pushState(null, "", `#/${id}`);
+      rewriteHistory("replaceState", basePath());
+      rewriteHistory("pushState", `#/${id}`);
       needsBaseEntry = false;
     }
 
@@ -289,7 +302,15 @@
   // Aufruf mit derselben id rendert nicht doppelt.
   function handleRoute() {
     const id = parseHash();
-    if (id && id === currentDetailId) return;
+    if (id && id === currentDetailId) {
+      // Zurück zum bereits offenen Rezept: ein evtl. gemerkter anderer
+      // Deep-Link ist damit hinfällig und darf später nichts mehr auslösen.
+      if (pendingId) {
+        pendingId = null;
+        setStatus("");
+      }
+      return;
+    }
 
     if (!id) {
       pendingId = null;
@@ -308,9 +329,20 @@
       return;
     }
 
+    // Ab hier zeigt die Adresszeile ein Rezept, das (noch) nicht da ist —
+    // ein offenes anderes Rezept darf dann nicht stehen bleiben.
+    if (!els.overlay.hidden) closeDetail();
+
     // Liegt die frische Liste schon vor, ist die Sache entschieden.
     if (listIsFresh) {
       notFound(id);
+      return;
+    }
+
+    // Ist das Laden bereits gescheitert, kommt nichts mehr nach — statt
+    // ewig "wird geladen" ehrlich den Ladefehler zeigen. Hash bleibt.
+    if (loadFailed) {
+      setNotice(LOAD_ERROR_MSG, true);
       return;
     }
 
@@ -324,7 +356,7 @@
     pendingId = null;
     needsBaseEntry = false;
     if (!els.overlay.hidden) closeDetail();
-    history.replaceState(null, "", basePath());
+    rewriteHistory("replaceState", basePath());
     setStatus("");
     setNotice(`Das Rezept «${id}» gibt es hier nicht (mehr). Vielleicht wirst du unten in der Sammlung fündig.`);
   }
@@ -531,13 +563,12 @@
   handleRoute();
   loadRecipes(!!cached).catch((err) => {
     console.error(err);
+    loadFailed = true;
     if (pendingId) {
       // Hash bewusst stehen lassen: ein Reload versucht den Link erneut. Ein
       // Ladefehler ist kein Beweis, dass das Rezept fehlt.
-      setNotice(
-        "Das verlinkte Rezept konnte nicht geladen werden — keine Verbindung oder GitHub-API-Limit erreicht. Lade die Seite später neu, der Link bleibt gültig.",
-        true
-      );
+      pendingId = null;
+      setNotice(LOAD_ERROR_MSG, true);
       setStatus("");
     }
     if (!cached) {

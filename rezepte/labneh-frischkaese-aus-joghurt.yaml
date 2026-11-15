@@ -1,0 +1,53 @@
+id: labneh-frischkaese-aus-joghurt
+title: Selbstgemachter Labneh – Frischkäse aus Joghurt
+description: >
+  Cremiger, leicht säuerlicher Frischkäse aus gesalzenem Joghurt, dessen
+  Molke über Nacht abtropft. In der Türkei als Süzme Yoğurt bekannt.
+lang: de
+author: Betty's Küchenschätze
+date_published: 2026-11-15   # Erfassungsdatum (Onlinerezept ohne Datum)
+images: [images/labneh-frischkaese-aus-joghurt.jpg]
+image_credit:
+  name: Betty's Küchenschätze
+  url: https://bettyskuechenschaetze.ch/selbstgemachter-labneh-frischkaese-aus-joghurt/
+category: Apéro
+cuisine: orientalisch
+keywords: [labneh, joghurt, frischkäse, dip, meze]
+diet: [vegetarian, gluten_free]
+difficulty: einfach
+times: { prep: 10, rest: 720 }   # 12 Stunden abtropfen im Kühlschrank
+yield:
+  servings: 4   # Quelle: «1 Portion» — als Dip für ca. 4 geschätzt
+
+steps:
+  - section: Labneh
+    text: >
+      {joghurt} mit {salz} glatt rühren. Ein dünnes, sauberes und neutral
+      riechendes Geschirrtuch anfeuchten und gut auswringen. Das Tuch in
+      ein Sieb legen und das Sieb so über eine grosse Schüssel hängen, dass
+      es die abtropfende Molke nicht berührt. Den gesalzenen Joghurt in das
+      Tuch füllen, abdecken und mindestens 12 Stunden im Kühlschrank
+      abtropfen und fest werden lassen.
+    ingredients:
+      - { id: joghurt, amount: 450, unit: g, item: Joghurt natur, note: "griechisch oder türkisch, aus Kuh- oder Ziegenmilch" }
+      - { id: salz, amount: 1, unit: TL, item: Salz }
+
+  - section: Topping
+    text: >
+      Den Labneh in eine Schüssel geben und mit einem Löffel ein
+      spiralförmiges Muster ziehen. {olivenoel} darüber verteilen und nach
+      Belieben mit {kraeuter}, {meersalz} sowie {extras} garnieren.
+    ingredients:
+      - { id: olivenoel, amount: 2, unit: EL, item: Olivenöl }
+      - { id: kraeuter, item: Kräuter, note: "z. B. Thymian, Petersilie oder Minze" }
+      - { id: meersalz, item: Meersalz }
+      - { id: extras, item: Sesam, note: "Za'atar, getrocknete Minze oder Pul Biber" }
+
+equipment: [Grosses Sieb, Geschirrtuch, Schüssel]
+source:
+  name: Betty's Küchenschätze
+  url: https://bettyskuechenschaetze.ch/selbstgemachter-labneh-frischkaese-aus-joghurt/
+notes: >
+  Original wird Labneh aus Ziegenmilch-Joghurt hergestellt. Dazu passen
+  Fladenbrot, Oliven, Gemüsesticks und Grissini. Ohne Topping hält sich der
+  Labneh im Kühlschrank etwa eine Woche.

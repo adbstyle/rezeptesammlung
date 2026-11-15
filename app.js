@@ -34,6 +34,9 @@
   let allRecipes = [];
   let activeCategory = null;
   let activeDiet = null;
+  let activeTag = null;
+  // Kuratierte Keywords, die als eigener Filter-Chip erscheinen.
+  const TAG_CHIPS = [{ value: "meze", label: "Meze" }];
 
   // Deep-Links: der Hash ist die einzige Quelle der Wahrheit dafür, welches
   // Rezept offen ist. Die UI ändert nur den Hash, handleRoute() zieht daraus
@@ -195,6 +198,7 @@
       recipe.category,
       recipe.cuisine,
       (recipe.diet || []).map(dietLabel).join(" "),
+      (recipe.keywords || []).join(" "),
       ingredients,
     ]
       .filter(Boolean)
@@ -403,6 +407,11 @@
     const chips = [];
     categories.forEach((c) => chips.push({ type: "category", value: c, label: c }));
     diets.forEach((d) => chips.push({ type: "diet", value: d, label: dietLabel(d) }));
+    TAG_CHIPS.forEach((t) => {
+      if (allRecipes.some((r) => (r.keywords || []).includes(t.value))) {
+        chips.push({ type: "tag", value: t.value, label: t.label });
+      }
+    });
 
     els.chips.innerHTML = chips
       .map(
@@ -417,6 +426,7 @@
     const filtered = allRecipes.filter((r) => {
       if (activeCategory && r.category !== activeCategory) return false;
       if (activeDiet && !(r.diet || []).includes(activeDiet)) return false;
+      if (activeTag && !(r.keywords || []).includes(activeTag)) return false;
       if (q && !r._search.includes(q)) return false;
       return true;
     });
@@ -435,11 +445,13 @@
       const { type, value } = btn.dataset;
       if (type === "category") activeCategory = activeCategory === value ? null : value;
       if (type === "diet") activeDiet = activeDiet === value ? null : value;
+      if (type === "tag") activeTag = activeTag === value ? null : value;
 
       els.chips.querySelectorAll(".chip").forEach((c) => {
         const active =
           (c.dataset.type === "category" && c.dataset.value === activeCategory) ||
-          (c.dataset.type === "diet" && c.dataset.value === activeDiet);
+          (c.dataset.type === "diet" && c.dataset.value === activeDiet) ||
+          (c.dataset.type === "tag" && c.dataset.value === activeTag);
         c.classList.toggle("chip--active", active);
       });
       applyFilters();

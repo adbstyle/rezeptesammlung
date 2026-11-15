@@ -1,0 +1,77 @@
+id: muhammara-paprika-dip-mit-walnuessen
+title: Muhammara – Orientalischer Paprika-Dip mit Walnüssen
+description: >
+  Paprika-Dip mit Walnüssen und fruchtiger Granatapfelnote, ein Klassiker
+  der orientalischen Mezze neben Hummus.
+lang: de
+author: Jenny Rose (Happy Plates)
+date_published: 2026-11-15   # Erfassungsdatum (Onlinerezept ohne Datum)
+images: [images/muhammara-paprika-dip-mit-walnuessen.jpg]
+image_credit:
+  name: Happy Plates
+  url: https://happyplates.com/r/42124/muhammara-orientalischer-paprika-dip-mit-walnuessen
+category: Apéro
+cuisine: orientalisch
+keywords: [muhammara, paprika, walnüsse, granatapfel, dip, meze]
+diet: [vegan, vegetarian, gluten_free, lactose_free]
+difficulty: einfach
+times: { prep: 5, cook: 45 }   # Quelle: 50 Min. gesamt, 5 Min. aktiv
+yield:
+  servings: 4   # in der Quelle nicht angegeben — geschätzt
+
+steps:
+  - section: Rösten
+    text: >
+      Ofen auf 220 °C Heissluft vorheizen und ein Backblech mit Backpapier
+      auslegen. {paprika} waschen, halbieren, entkernen und mit der
+      Schnittfläche nach unten aufs Blech legen. Mit der Hälfte des
+      {olivenoel} vermengen, leicht mit {salz} würzen und 30 Minuten
+      backen. {knoblauch} mit der Schale andrücken, nach 30 Minuten
+      dazugeben und weitere 15 Minuten rösten, bis die Paprikahaut
+      stellenweise schwarz wird und Blasen wirft. Währenddessen {walnuesse}
+      ohne Fett in einer Pfanne bei mittlerer Hitze etwa 5 Minuten rösten,
+      bis Röstspuren sichtbar sind.
+    ingredients:
+      - { id: paprika, item: Paprika }
+      - { id: olivenoel, item: Olivenöl }
+      - { id: salz, item: Salz }
+      - { id: knoblauch, item: Knoblauchzehen }
+      - { id: walnuesse, item: Walnüsse }
+
+  - section: Mixen
+    text: >
+      Das Blech herausnehmen und kurz abkühlen lassen. Paprikahaut abziehen
+      und den Knoblauch aus der Schale drücken. Paprika, Knoblauch,
+      Walnüsse, {zitronensaft}, {kreuzkuemmel}, {granatapfelsirup} und das
+      restliche {olivenoel} pulsierend mixen, bis die Masse grobkörnig ist.
+    ingredients:
+      - { id: zitronensaft, item: Zitronensaft }
+      - { id: kreuzkuemmel, item: Kreuzkümmel }
+      - { id: granatapfelsirup, item: Granatapfelsirup }
+      - { id: olivenoel, item: Olivenöl }
+
+  - section: Anrichten
+    text: >
+      {granatapfelkerne} auslösen. Den Dip in eine Schüssel füllen, mit
+      {salz} und auf Wunsch mehr Zitronensaft abschmecken und mit den
+      Granatapfelkernen und {chiliflocken} bestreuen.
+    ingredients:
+      - { id: granatapfelkerne, item: Granatapfelkerne }
+      - { id: salz, item: Salz }
+      - { id: chiliflocken, item: Chiliflocken }
+
+equipment: [Standmixer, Backblech, Backpapier]
+source:
+  name: Happy Plates
+  url: https://happyplates.com/r/42124/muhammara-orientalischer-paprika-dip-mit-walnuessen
+notes: >
+  Das Gemüse muss bei starker Hitze geröstet werden, damit die Röstaromen
+  entstehen. Je dunkler die Paprikahaut, desto leichter lässt sie sich
+  abziehen. Auch Tomaten oder ganze Chilischoten lassen sich mitrösten.
+  Walnüsse können roh oder geröstet verwendet werden, Ersatz sind geröstete
+  Mandeln, Cashews oder Sonnenblumenkerne. Ersatz für Granatapfelsirup:
+  Zitronensaft mit etwas Honig oder Ahornsirup mischen oder ein Schuss
+  milder Balsamico. Ist der Dip zu flüssig, die Paprika gut abtropfen lassen
+  und Walnüsse nach und nach ergänzen. Der Dip lässt sich am Vortag
+  zubereiten; Granatapfelkerne und Toppings erst kurz vor dem Servieren
+  daraufgeben.

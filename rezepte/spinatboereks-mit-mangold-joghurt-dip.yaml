@@ -1,0 +1,74 @@
+id: spinatboereks-mit-mangold-joghurt-dip
+title: Spinatböreks mit Mangold-Joghurt-Dip (Borani)
+description: >
+  Knusprig gebackene Filoteig-Röllchen mit Spinatfüllung, dazu ein frischer
+  Joghurt-Dip mit Mangold, getrockneter Minze und Sumach.
+lang: de
+author: Vegetarisch Kochen (Kapitel «Spinat & Mangold»)
+date_published: 2026-11-15   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/spinatboereks-mit-mangold-joghurt-dip.jpg]
+image_credit:
+  name: Vegetarisch Kochen (Kapitel «Spinat & Mangold»)
+  url: null
+category: Vorspeise
+cuisine: orientalisch
+keywords: [spinat, mangold, filoteig, börek, joghurt, minze, sumach, meze]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 30, cook: 30 }   # Zeiten geschätzt, im Buch nicht angegeben
+yield:
+  servings: 4   # im Buch nicht angegeben — geschätzt
+
+steps:
+  - section: Füllung
+    text: >
+      {zwiebel} schälen und würfeln, {knoblauch} schälen und reiben.
+      {spinat} gut ausdrücken. Zwiebel in etwas {olivenoel} goldbraun
+      anbraten. Knoblauch und Spinat hinzufügen, alles gut vermischen und
+      ein paar Minuten anbraten. Mit {salz} und {pfeffer} abschmecken und
+      auskühlen lassen.
+    ingredients:
+      - { id: zwiebel, amount: 1, item: gelbe Zwiebel }
+      - { id: knoblauch, amount: 1, item: Knoblauchzehe }
+      - { id: spinat, amount: 150, unit: g, item: Blattspinat, note: aufgetaut }
+      - { id: olivenoel, item: Olivenöl }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: Pfeffer }
+
+  - section: Röllchen
+    text: >
+      Ofen auf 180 °C Heissluft vorheizen. Eine Lage {filoteig} auf der
+      Arbeitsfläche auflegen, mit etwas {olivenoel} bestreichen und mit
+      einer zweiten Lage bedecken. Das Rechteck in 5 gleich grosse
+      Streifen schneiden, jeden Streifen mit etwas Spinatmischung belegen
+      und einrollen. Das Ganze mit dem Rest von Teig und Füllung
+      wiederholen. Die Röllchen auf ein Backblech mit Backpapier legen und
+      im vorgeheizten Ofen etwa 20 Minuten goldbraun backen.
+    ingredients:
+      - { id: filoteig, amount: 4, item: Lagen Filoteig }
+      - { id: olivenoel, item: Olivenöl }
+
+  - section: Dip
+    text: >
+      {mangold} in feine Streifen schneiden und in {olivenoel} anbraten.
+      Mit {joghurt}, {minze} und {sumach} vermischen und mit {salz} und
+      {pfeffer} abschmecken. Spinatböreks mit dem Dip anrichten.
+    ingredients:
+      - { id: mangold, amount: 2, item: Mangoldblätter, note: ohne Strunk }
+      - { id: olivenoel, item: Olivenöl }
+      - { id: joghurt, amount: 100, unit: g, item: Joghurt }
+      - { id: minze, amount: 0.5, unit: TL, item: getrocknete Minze }
+      - { id: sumach, amount: 0.5, unit: TL, item: Sumach }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: Pfeffer }
+
+equipment: [Backblech, Backpapier]
+source:
+  name: Vegetarisch Kochen (Kapitel «Spinat & Mangold»)
+  url: null
+notes: >
+  Füllung und fertige Röllchen lassen sich praktisch vorbereiten. Zum
+  Aufwärmen die fertig gebackenen Röllchen ca. 5 Minuten bei 150 °C in den
+  vorgeheizten Ofen schieben — falls sie im Kühlschrank aufbewahrt wurden,
+  zuerst auf Raumtemperatur bringen. Statt Filoteig eignet sich auch
+  Strudelteig. Die getrocknete Minze lässt sich durch frische Minze ersetzen.

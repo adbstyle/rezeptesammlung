@@ -13,7 +13,7 @@ image_credit:
   url: null
 category: Hauptgericht
 cuisine: orientalisch
-keywords: [pilze, köfte, kichererbsen, rotkohl, radieschen, joghurt, minze]
+keywords: [pilze, köfte, kichererbsen, rotkohl, radieschen, joghurt, minze, meze]
 diet: [vegetarian]
 difficulty: einfach
 times: { prep: 30, cook: 20, rest: 120 }   # Zeiten geschätzt, im Buch nur «2 Stunden ziehen lassen»

@@ -5,11 +5,11 @@ description: >
   ein knackiger Radieschen-Rotkohl-Salat mit Cumin und ein frischer
   Kräuter-Joghurt-Dip mit Minze und Zitrone.
 lang: de
-author: Kochbuch (Kapitel «Pilze»)
+author: Vegetarisch Kochen (Kapitel «Pilze»)
 date_published: 2026-11-15   # Buchrezept ohne Datum — Erfassungsdatum
 images: [images/pilzkoefte-mit-radieschen-rotkohl-salat.jpg]
 image_credit:
-  name: Kochbuch (Kapitel «Pilze»)
+  name: Vegetarisch Kochen (Kapitel «Pilze»)
   url: null
 category: Hauptgericht
 cuisine: orientalisch
@@ -88,7 +88,7 @@ steps:
 
 equipment: [Küchenmaschine, Küchenpapier]
 source:
-  name: Kochbuch (Kapitel «Pilze»)
+  name: Vegetarisch Kochen (Kapitel «Pilze»)
   url: null
 notes: >
   Der Köfteteig hält sich im Kühlschrank bis zu einer Woche. Köfte bei

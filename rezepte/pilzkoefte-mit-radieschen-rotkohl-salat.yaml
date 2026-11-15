@@ -1,0 +1,98 @@
+id: pilzkoefte-mit-radieschen-rotkohl-salat
+title: Pilzköfte mit Radieschen-Rotkohl-Salat und Kräuter-Joghurt-Dip
+description: >
+  Knusprig frittierte Köfte aus Pilzen, Kichererbsen und Haferflocken, dazu
+  ein knackiger Radieschen-Rotkohl-Salat mit Cumin und ein frischer
+  Kräuter-Joghurt-Dip mit Minze und Zitrone.
+lang: de
+author: Kochbuch (Kapitel «Pilze»)
+date_published: 2026-11-15   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/pilzkoefte-mit-radieschen-rotkohl-salat.jpg]
+image_credit:
+  name: Kochbuch (Kapitel «Pilze»)
+  url: null
+category: Hauptgericht
+cuisine: orientalisch
+keywords: [pilze, köfte, kichererbsen, rotkohl, radieschen, joghurt, minze]
+diet: [vegetarian]
+difficulty: einfach
+times: { prep: 30, cook: 20, rest: 120 }   # Zeiten geschätzt, im Buch nur «2 Stunden ziehen lassen»
+yield:
+  servings: 4   # im Buch nicht angegeben — geschätzt
+
+steps:
+  - section: Köfte
+    text: >
+      {zwiebel} schälen und vierteln. Mit {kichererbsen}, {pilze},
+      {knoblauch}, {petersilie}, {kichererbsenmehl}, {haferflocken},
+      {cumin}, {koriander}, {paprika}, {kurkuma} und {salz} in der
+      Küchenmaschine zu einer Paste mixen. 2 Stunden ziehen lassen.
+    ingredients:
+      - { id: zwiebel, amount: 1, item: gelbe Zwiebel }
+      - { id: kichererbsen, amount: 200, unit: g, item: Kichererbsen aus der Dose, note: Abtropfgewicht }
+      - { id: pilze, amount: 300, unit: g, item: gemischte Pilze, note: "Shiitakes, Austernpilze, Kräuterseitlinge" }
+      - { id: knoblauch, amount: 1, item: Knoblauchzehe }
+      - { id: petersilie, amount: 20, unit: g, item: Petersilie }
+      - { id: kichererbsenmehl, amount: 5, unit: EL, item: Kichererbsenmehl }
+      - { id: haferflocken, amount: 150, unit: g, item: Haferflocken }
+      - { id: cumin, amount: 0.5, unit: TL, item: gemahlener Cumin }
+      - { id: koriander, amount: 0.5, unit: TL, item: gemahlener Koriander }
+      - { id: paprika, amount: 0.5, unit: TL, item: Paprikapulver }
+      - { id: kurkuma, amount: 1, unit: Prise, item: Kurkuma, scalable: false }
+      - { id: salz, item: Salz }
+
+  - section: Köfte
+    text: >
+      Kleine Köfte formen. In heissem {oel} (ca. 180 °C) knusprig
+      frittieren, herausheben und auf Küchenpapier abtropfen lassen.
+    ingredients:
+      - { id: oel, amount: 250, unit: ml, item: Öl, note: zum Frittieren }
+
+  - section: Salat
+    text: >
+      {rotkohl} in dünne Streifen schneiden. Mit {salz} einsalzen, kneten
+      und 15 Minuten stehen lassen. Danach gut ausdrücken. Mit {cumin},
+      {zitrussaft} und {olivenoel} marinieren. {radieschen} halbieren
+      oder vierteln. Rotkohlsalat mit den Radieschen auf einem Teller
+      anrichten und mit {maldonsalz} bestreuen.
+    ingredients:
+      - { id: rotkohl, amount: 250, unit: g, item: Rotkohl }
+      - { id: salz, item: Salz }
+      - { id: cumin, amount: 0.5, unit: TL, item: gemahlener Cumin }
+      - { id: zitrussaft, amount: 2, unit: EL, item: Limetten- oder Zitronensaft }
+      - { id: olivenoel, amount: 3, unit: EL, item: Olivenöl }
+      - { id: radieschen, amount: 0.5, unit: Bund, item: Radieschen }
+      - { id: maldonsalz, item: Maldonsalz }
+
+  - section: Dip
+    text: >
+      Von der {minze} die Blätter abzupfen und fein hacken. {joghurt} mit
+      {kraeuter}, der Minze, {zitrone} (Abrieb und Saft) sowie
+      {olivenoel} gut mischen und in eine kleine Schüssel füllen.
+    ingredients:
+      - { id: minze, item: Minzzweige, note: einige }
+      - { id: joghurt, amount: 250, unit: g, item: Joghurt, note: "3,6 % Fett" }
+      - { id: kraeuter, amount: 1, unit: TL, item: getrocknete Kräuter, note: "z. B. Petersilie, Dille" }
+      - { id: zitrone, amount: 0.5, item: Zitrone, note: Abrieb und Saft }
+      - { id: olivenoel, amount: 2, unit: EL, item: Olivenöl }
+
+  - section: Anrichten
+    text: >
+      Köfte auf einem Teller anrichten, mit {rotezwiebel},
+      {kraeuterblaetter} und {zitronenspalten} garnieren und mit Salat
+      sowie Dip servieren.
+    ingredients:
+      - { id: rotezwiebel, item: rote Zwiebel, note: in Spalten }
+      - { id: kraeuterblaetter, item: frische Kräuterblätter, note: "z. B. Koriander, Petersilie, Minze" }
+      - { id: zitronenspalten, item: Zitronenspalten }
+
+equipment: [Küchenmaschine, Küchenpapier]
+source:
+  name: Kochbuch (Kapitel «Pilze»)
+  url: null
+notes: >
+  Der Köfteteig hält sich im Kühlschrank bis zu einer Woche. Köfte bei
+  Bedarf frisch in Öl ausbacken oder anbraten. Auch der Salat lässt sich
+  gut auf Vorrat zubereiten und einige Tage kühl lagern. Mit kalten Köfte,
+  Salat und Dip hat man auch die Zutaten für ein köstliches Pita-Sandwich
+  parat.

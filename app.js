@@ -112,7 +112,9 @@
   }
 
   async function fetchText(url) {
-    const res = await fetch(url);
+    // "no-cache" = jedes Mal per ETag revalidieren (304 ist billig). Ohne das
+    // hält der Browser eine geänderte YAML bis zu 10 Min. (Pages max-age) alt.
+    const res = await fetch(url, { cache: "no-cache" });
     if (!res.ok) throw new Error(`${url} → HTTP ${res.status}`);
     return res.text();
   }

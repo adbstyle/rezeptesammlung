@@ -1,0 +1,79 @@
+id: gerostete-kuerbisspalten-auf-labneh-mit-granatapfelsalsa
+title: Geröstete Kürbisspalten auf Labneh mit Granatapfelsalsa
+description: >
+  Im Ofen gebackene, gewürzte Hokkaido-Spalten auf cremigem Labneh, dazu
+  eine frische Salsa aus Kräutern, roter Zwiebel und Granatapfelkernen.
+lang: de
+author: Vegetarisch Kochen (Kapitel «Kürbis & Gurken»)
+date_published: 2026-11-15   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/gerostete-kuerbisspalten-auf-labneh-mit-granatapfelsalsa.jpg]
+image_credit:
+  name: Vegetarisch Kochen (Kapitel «Kürbis & Gurken»)
+  url: null
+category: Vorspeise
+cuisine: orientalisch
+keywords: [kürbis, hokkaido, labneh, granatapfel, kräuter, meze]
+diet: [vegetarian, gluten_free]
+difficulty: einfach
+times: { prep: 25, cook: 20 }   # Zeiten geschätzt, im Buch nur «15–20 Min. backen»
+yield:
+  servings: 4   # im Buch nicht angegeben — geschätzt
+
+steps:
+  - section: Kürbis
+    text: >
+      Ofen auf 185 °C Heissluft vorheizen. {kuerbis} halbieren, entkernen
+      und in 2–3 cm dicke Spalten schneiden. {kurkuma}, {paprika},
+      {sumach}, {zimt}, {zitronensaft}, {honig} und {olivenoel}
+      verrühren und die Kürbisspalten damit marinieren. Ein Backblech mit
+      Backpapier auslegen und die Spalten nebeneinander darauflegen. Im
+      vorgeheizten Ofen 15–20 Minuten backen. Die Spalten sind fertig,
+      wenn sie an den Enden leicht karamellisiert und beim Anstechen weich
+      genug sind. Mit {salz} und {pfeffer} abschmecken.
+    ingredients:
+      - { id: kuerbis, amount: 1, item: Hokkaidokürbis, note: ca. 500 g }
+      - { id: kurkuma, amount: 0.5, unit: TL, item: Kurkuma }
+      - { id: paprika, amount: 0.5, unit: TL, item: Paprikapulver }
+      - { id: sumach, amount: 0.5, unit: TL, item: Sumach }
+      - { id: zimt, amount: 1, unit: Prise, item: Zimt }
+      - { id: zitronensaft, amount: 1, unit: EL, item: Zitronensaft }
+      - { id: honig, amount: 1, unit: TL, item: Honig }
+      - { id: olivenoel, amount: 2, unit: EL, item: Olivenöl }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: Pfeffer }
+
+  - section: Salsa
+    text: >
+      {dill}, {petersilie}, {minze} und {koriander} fein hacken. {zwiebel}
+      schälen und fein würfeln. Kräuter und Zwiebel in einer Schüssel mit
+      {granatapfelkerne} vermischen. Die Salsa mit {limette}, {olivenoel2},
+      {salz} und {pfeffer} abschmecken.
+    ingredients:
+      - { id: dill, amount: 10, unit: g, item: Dillblätter }
+      - { id: petersilie, amount: 10, unit: g, item: Petersilienblätter }
+      - { id: minze, amount: 10, unit: g, item: Minzblätter }
+      - { id: koriander, amount: 10, unit: g, item: Korianderblätter }
+      - { id: zwiebel, amount: 1, item: kleine rote Zwiebel }
+      - { id: granatapfelkerne, amount: 5, unit: EL, item: Granatapfelkerne }
+      - { id: limette, amount: 0.5, item: Limette, note: Saft }
+      - { id: olivenoel2, amount: 5, unit: EL, item: Olivenöl }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: Pfeffer }
+
+  - section: Anrichten
+    text: >
+      {labneh} auf einem Teller ausstreichen, die Kürbisspalten darauf
+      verteilen und etwas Salsa darübergeben. Restliche Salsa in einer
+      Schüssel mit an den Tisch bringen.
+    ingredients:
+      - { id: labneh, amount: 150, unit: g, item: Labneh }
+
+equipment: [Backblech, Backpapier]
+source:
+  name: Vegetarisch Kochen (Kapitel «Kürbis & Gurken»)
+  url: null
+notes: >
+  Statt Hokkaido passen auch Stücke von Muskatkürbis. Der Kürbis sollte vor
+  dem Anrichten etwas abkühlen. Schneller geht es mit griechischem Joghurt
+  statt Labneh oder mit Joghurt, der nur 2–3 Stunden abtropft. Labneh
+  selbst machen: siehe «Selbstgemachter Labneh».

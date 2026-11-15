@@ -1,0 +1,74 @@
+id: wirsingspalten-auf-kuerbispuree-mit-dukkah
+title: Wirsingspalten auf Kürbispüree mit Dukkah
+description: >
+  Im Ofen gebackene Wirsingviertel auf samtigem Hokkaido-Püree, mit
+  Dukkah-Öl beträufelt und mit frischen Kräutern und Jungzwiebeln
+  garniert.
+lang: de
+author: Vegetarisch Kochen (Kapitel «Kürbis & Gurken»)
+date_published: 2026-11-15   # Buchrezept ohne Datum — Erfassungsdatum
+images: [images/wirsingspalten-auf-kuerbispuree-mit-dukkah.jpg]
+image_credit:
+  name: Vegetarisch Kochen (Kapitel «Kürbis & Gurken»)
+  url: null
+category: Vorspeise
+cuisine: orientalisch
+keywords: [wirsing, kürbis, hokkaido, dukkah, kräuter, meze]
+diet: [vegetarian, gluten_free]
+difficulty: einfach
+times: { prep: 15, cook: 75 }   # Zeiten geschätzt, im Buch nur Backzeiten genannt
+yield:
+  servings: 4   # im Buch nicht angegeben — geschätzt
+
+steps:
+  - section: Wirsing
+    text: >
+      Ofen auf 190 °C Heissluft vorheizen. {wirsing} als Ganzes im
+      vorgeheizten Ofen 35 Minuten backen. Anschliessend vierteln und je
+      nach Grösse weitere 30–40 Minuten bei 175 °C Heissluft backen.
+    ingredients:
+      - { id: wirsing, amount: 1, item: kleiner Wirsing }
+
+  - section: Kürbispüree
+    text: >
+      Währenddessen {zwiebel} schälen und würfeln. {kuerbis} in Spalten
+      schneiden. Zwiebel und Kürbis in einem kleinen Topf mit etwas
+      {olivenoel} 5 Minuten anbraten. Mit {bruehe} ablöschen und zugedeckt
+      ca. 15 Minuten weichkochen. In einer Küchenmaschine oder mit einem
+      Stabmixer glatt pürieren. Nach Belieben {butter} unterrühren.
+    ingredients:
+      - { id: zwiebel, amount: 1, item: kleine gelbe Zwiebel }
+      - { id: kuerbis, amount: 200, unit: g, item: Hokkaidokürbis }
+      - { id: olivenoel, item: Olivenöl }
+      - { id: bruehe, amount: 100, unit: ml, item: Gemüsebrühe }
+      - { id: butter, amount: 0.5, unit: EL, item: kalte Butter, note: optional }
+
+  - section: Dukkah-Öl
+    text: >
+      {dukkah} mit etwas {olivenoel} anrühren, bis die gewünschte
+      Konsistenz erreicht ist.
+    ingredients:
+      - { id: dukkah, amount: 2, unit: EL, item: Dukkah, note: "Rezept im Buch S. 223" }
+      - { id: olivenoel, item: Olivenöl }
+
+  - section: Anrichten
+    text: >
+      Das Kürbispüree auf einem Teller ausstreichen und die Wirsingviertel
+      darauf anrichten. Mit dem Dukkah-Öl beträufeln und mit {kraeuter}
+      sowie {jungzwiebeln} garnieren.
+    ingredients:
+      - { id: kraeuter, item: Minz- und Korianderblätter }
+      - { id: jungzwiebeln, item: Jungzwiebelringe }
+
+equipment: [Küchenmaschine oder Stabmixer, Backblech]
+source:
+  name: Vegetarisch Kochen (Kapitel «Kürbis & Gurken»)
+  url: null
+notes: >
+  Die Wirsingspalten lassen sich gut vorbereiten und können mehrfach
+  aufgewärmt werden – die Konsistenz wird dadurch weicher. Statt Wirsing
+  passen auch Spitzkohl, gegrillter Blumenkohl oder (Miso-)Brokkoli zum
+  Kürbispüree. Übriges Kürbispüree ergibt mit Fond aufgegossen und mit
+  etwas Kokosmilch verfeinert eine cremige Suppe. Wer Lust hat, setzt dafür
+  gleich während der Zubereitung des Pürees einen Fond aus
+  Kürbisabschnitten an.

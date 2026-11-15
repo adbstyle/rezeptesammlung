@@ -1,0 +1,70 @@
+id: batata-harra-libanesische-bratkartoffeln
+title: Batata Harra – scharfe libanesische Bratkartoffeln
+description: >
+  Scharfe libanesische Bratkartoffeln mit orientalischen Gewürzen,
+  Knoblauch, Koriander und Zitronensaft. Schön knusprig dank festkochender
+  Kartoffeln, die vor dem Braten in kaltem Wasser liegen.
+lang: de
+author: Betty's Küchenschätze
+date_published: 2024-04-12
+images: [images/batata-harra-libanesische-bratkartoffeln.jpg]
+image_credit:
+  name: Betty's Küchenschätze
+  url: https://bettyskuechenschaetze.ch/die-scharfen-libanesischen-bratkartoffeln-batata-harra/
+category: Beilage
+cuisine: libanesisch
+keywords: [batata harra, kartoffeln, scharf, koriander, meze]
+diet: [vegan, vegetarian, gluten_free, lactose_free]
+difficulty: einfach
+times: { prep: 20, cook: 35 }   # Quelle: 55 Min. gesamt
+yield:
+  servings: 4
+
+steps:
+  - section: Vorbereiten
+    text: >
+      {kartoffeln} schälen und in 1 cm grosse Würfel schneiden. Die
+      Würfel 10 Minuten in kaltem Wasser einlegen und danach abtropfen.
+    ingredients:
+      - { id: kartoffeln, amount: 1.5, unit: kg, item: Kartoffeln, note: festkochend }
+
+  - section: Dünsten
+    text: >
+      In einer grossen Bratpfanne mit guter Beschichtung {olivenoel}
+      erwärmen. Die Kartoffelwürfel hinzufügen und gut mit dem Öl
+      vermengen. Zugedeckt bei mittlerer Hitze ca. 20 Minuten oder bis sie
+      weich sind dünsten und dabei ab und zu wenden. Währenddessen
+      {knoblauch} schälen und hacken.
+    ingredients:
+      - { id: olivenoel, amount: 2, unit: EL, item: Olivenöl }
+      - { id: knoblauch, amount: 5, item: Knoblauchzehen }
+
+  - section: Würzen und braten
+    text: >
+      Erst wenn die Kartoffeln weich sind, {olivenoel} und den Knoblauch
+      hinzufügen. Mit {salz}, {paprika}, {chiliflocken} und {kreuzkuemmel}
+      würzen. Die Kartoffelwürfel ohne Deckel bei mittelhoher Hitze ca.
+      10 Minuten knusprig braten und oft wenden.
+    ingredients:
+      - { id: olivenoel, amount: 3, unit: EL, item: Olivenöl }
+      - { id: salz, amount: 3, unit: TL, item: Salz }
+      - { id: paprika, amount: 2, unit: TL, item: Paprikapulver }
+      - { id: chiliflocken, amount: 2, unit: TL, item: Chiliflocken }
+      - { id: kreuzkuemmel, amount: 1, unit: TL, item: Kreuzkümmel }
+
+  - section: Fertigstellen
+    text: >
+      {koriander} hacken und den Saft von {zitrone} auspressen. Wenn die
+      Kartoffeln knusprig sind, Koriander und Zitronensaft untermischen und
+      die Batata Harra abschmecken.
+    ingredients:
+      - { id: koriander, amount: 1, unit: Bund, item: Koriander }
+      - { id: zitrone, amount: 0.5, item: Zitrone, note: Saft }
+
+equipment: [Grosse Bratpfanne mit Deckel]
+source:
+  name: Betty's Küchenschätze
+  url: https://bettyskuechenschaetze.ch/die-scharfen-libanesischen-bratkartoffeln-batata-harra/
+notes: >
+  Batata Harra wird gern zusammen mit anderen Mezze oder als Beilage zu
+  Gegrilltem serviert.

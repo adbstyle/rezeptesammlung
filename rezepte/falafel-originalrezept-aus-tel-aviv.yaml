@@ -1,0 +1,56 @@
+id: falafel-originalrezept-aus-tel-aviv
+title: Falafel – Originalrezept aus Tel Aviv
+description: >
+  Hausgemachte Falafel aus eingeweichten Kichererbsen und frischen Kräutern,
+  knusprig im Topf frittiert.
+lang: de
+author: Happy Plates
+date_published: 2026-11-15   # Erfassungsdatum (Onlinerezept ohne Datum)
+images: [images/falafel-originalrezept-aus-tel-aviv.jpg]
+image_credit:
+  name: Ariel Pedatzur (Happy Plates)
+  url: https://happyplates.com/r/42018/falafel-originalrezept-aus-tel-aviv
+category: Beilage
+cuisine: israelisch
+keywords: [falafel, kichererbsen, koriander, petersilie, meze]
+diet: [vegan, vegetarian, gluten_free, lactose_free]
+difficulty: einfach
+times: { prep: 25, cook: 15, rest: 1500 }   # Quelle: 25 Min. aktiv; rest = über Nacht einweichen + 1 Std. kühlen; Frittierzeit geschätzt
+yield:
+  servings: 6
+
+steps:
+  - section: Einweichen
+    text: >
+      {kichererbsen} über Nacht in Wasser einweichen. Achtung: Die
+      Kichererbsen gehen stark auf, deshalb eine grosse Schüssel mit genug
+      Platz verwenden.
+    ingredients:
+      - { id: kichererbsen, amount: 400, unit: g, item: getrocknete Kichererbsen }
+
+  - section: Falafelmasse
+    text: >
+      Am nächsten Tag die Kichererbsen mit {koriander}, {petersilie},
+      {backpulver}, {salz} und {kreuzkuemmel} im Mixer pürieren. Die Textur
+      darf ruhig etwas krümelig sein. Die Masse eine Stunde in den
+      Kühlschrank stellen.
+    ingredients:
+      - { id: koriander, amount: 60, unit: g, item: frischer Koriander }
+      - { id: petersilie, amount: 100, unit: g, item: frische Petersilie }
+      - { id: backpulver, amount: 1.5, unit: TL, item: Backpulver }
+      - { id: salz, amount: 1, unit: EL, item: Salz }
+      - { id: kreuzkuemmel, amount: 1, unit: TL, item: gemahlener Kreuzkümmel }
+
+  - section: Frittieren
+    text: >
+      {oel} in einem Topf erhitzen. Die Masse zu Bällchen formen und
+      knusprig goldbraun frittieren.
+    ingredients:
+      - { id: oel, amount: 300, unit: g, item: Sonnenblumenöl, note: zum Frittieren }
+
+equipment: [Standmixer, Topf, Grosse Schüssel]
+source:
+  name: Happy Plates
+  url: https://happyplates.com/r/42018/falafel-originalrezept-aus-tel-aviv
+notes: >
+  Eine leicht krümelige Konsistenz der Masse ist völlig in Ordnung.

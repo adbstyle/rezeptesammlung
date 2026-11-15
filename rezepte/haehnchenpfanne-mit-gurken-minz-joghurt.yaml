@@ -1,0 +1,66 @@
+id: haehnchenpfanne-mit-gurken-minz-joghurt
+title: Hähnchenpfanne mit Gurken-Minz-Joghurt
+description: >
+  Orientalische Hähnchenpfanne mit Ras el-Hanout, dazu ein frischer Joghurt
+  mit Gurke, Minze und Feta.
+lang: de
+author: Essen & Trinken (Gelinggarantie)
+date_published: 2026-11-15   # Erfassungsdatum (Quelle: 02.07.2026)
+images: [images/haehnchenpfanne-mit-gurken-minz-joghurt.jpg]
+image_credit:
+  name: Essen & Trinken
+  url: https://www.essen-und-trinken.de/rezepte/haehnchenpfanne-mit-gurken-minz-joghurt-1-12088474.html
+category: Hauptgericht
+cuisine: orientalisch
+keywords: [hähnchen, ras el-hanout, gurke, minze, joghurt, feta, meze]
+difficulty: einfach
+times: { prep: 25, cook: 10, rest: 15 }   # Quelle: 50 Min. gesamt; Aufteilung geschätzt
+yield:
+  servings: 4
+
+steps:
+  - section: Hähnchen
+    text: >
+      {haehnchen} in 3 cm grosse Stücke schneiden. {zwiebeln} halbieren und
+      in Streifen schneiden. {knoblauch} hacken. Das Hähnchen in einer
+      Schüssel mit Zwiebeln, Knoblauch, {zitronensaft}, {honig},
+      {raselhanout}, {salz}, {pfeffer}, {cayenne} und {lorbeer} mischen und
+      mindestens 15 Minuten abgedeckt marinieren. {oel} in einer Pfanne
+      erhitzen. Das marinierte Fleisch darin bei mittlerer bis starker
+      Hitze rundherum 8–10 Minuten braun braten, evtl. mit Salz und Pfeffer
+      nachwürzen und lauwarm servieren.
+    ingredients:
+      - { id: haehnchen, amount: 600, unit: g, item: Hähnchenbrustfilet }
+      - { id: zwiebeln, amount: 2, item: weisse Zwiebeln }
+      - { id: knoblauch, amount: 1, item: Knoblauchzehe }
+      - { id: zitronensaft, amount: 2.5, unit: EL, item: Zitronensaft }
+      - { id: honig, amount: 3, unit: TL, item: Honig }
+      - { id: raselhanout, amount: 2, unit: TL, item: Ras el-Hanout }
+      - { id: salz, item: Salz }
+      - { id: pfeffer, item: Pfeffer }
+      - { id: cayenne, amount: 1, unit: Prise, item: Cayennepfeffer }
+      - { id: lorbeer, amount: 2, unit: Blatt, item: Lorbeer }
+      - { id: oel, amount: 2, unit: EL, item: Olivenöl }
+
+  - section: Gurken-Minz-Joghurt
+    text: >
+      {gurken} waschen und mit Schale raspeln. Die Gurken in einem feinen
+      Sieb mit 2 Prisen {salz} mischen und 10 Minuten über einer Schüssel
+      entwässern, danach leicht ausdrücken. {knoblauch2} und {minze} fein
+      hacken. {joghurt} mit Gurken, Knoblauch, Minze und {zitronensaft2}
+      mischen. {feta} fein zerbröseln und untermischen. Mit {salz} und
+      {pfeffer} würzen.
+    ingredients:
+      - { id: gurken, amount: 2, item: Mini-Salatgurken }
+      - { id: salz, item: Salz }
+      - { id: knoblauch2, amount: 0.5, item: Knoblauchzehe }
+      - { id: minze, amount: 4, unit: Zweig, item: Minze }
+      - { id: joghurt, amount: 400, unit: g, item: griechischer Joghurt }
+      - { id: zitronensaft2, amount: 2, unit: TL, item: Zitronensaft }
+      - { id: feta, amount: 100, unit: g, item: Feta }
+      - { id: pfeffer, item: Pfeffer }
+
+equipment: [Pfanne, Feines Sieb]
+source:
+  name: Essen & Trinken
+  url: https://www.essen-und-trinken.de/rezepte/haehnchenpfanne-mit-gurken-minz-joghurt-1-12088474.html
